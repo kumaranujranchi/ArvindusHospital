@@ -1,0 +1,448 @@
+{% extends 'layout.html' %}
+
+{% block title %}Arvindu Hospitals - Leading Multi-Specialty Healthcare{% endblock %}
+
+{% block content %}
+<!-- Hero Section Start -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Your Health Is Our Priority</h1>
+            <p>At Arvindu Hospitals, we combine medical excellence with compassionate care to deliver the best healthcare experience for you and your family.</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('appointment') }}" class="btn btn-primary me-3">Book Appointment</a>
+                <a href="{{ url_for('departments') }}" class="btn btn-outline-light">Our Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Services Section Start -->
+<section class="services-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Medical Services</h2>
+            <p>We offer a wide range of medical services to meet your healthcare needs</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h4>Cardiology</h4>
+                    <p>Our cardiology department provides comprehensive heart care, from diagnostics to advanced treatments for complex cardiac conditions.</p>
+                    <a href="{{ url_for('departments') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Neurology</h4>
+                    <p>Our neurology team specializes in the diagnosis and treatment of disorders affecting the nervous system, brain, and spine.</p>
+                    <a href="{{ url_for('departments') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h4>Orthopedics</h4>
+                    <p>From sports injuries to joint replacements, our orthopedic specialists provide expert care for all musculoskeletal conditions.</p>
+                    <a href="{{ url_for('departments') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h4>Pediatrics</h4>
+                    <p>Our pediatric department provides compassionate care for infants, children, and adolescents in a child-friendly environment.</p>
+                    <a href="{{ url_for('departments') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-venus"></i>
+                    </div>
+                    <h4>Gynecology</h4>
+                    <p>We offer comprehensive gynecological care, including preventative services, diagnostics, and advanced treatments for women.</p>
+                    <a href="{{ url_for('departments') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h4>Laboratory</h4>
+                    <p>Our state-of-the-art laboratory provides accurate and timely testing services to support diagnosis and treatment.</p>
+                    <a href="{{ url_for('departments') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('departments') }}" class="btn btn-primary">View All Services</a>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
+
+<!-- About Section Start -->
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <div style="height: 400px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                        <i class="fas fa-hospital fa-5x" style="color: #ccc;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2>About Arvindu Hospitals</h2>
+                    <p>Established in 2005, Arvindu Hospitals has grown to become one of the leading multi-specialty healthcare providers with three branches in Patna, Chapra, and Jamui. Our mission is to deliver excellent medical services with compassion and care.</p>
+                    <p>With over 100 experienced doctors and 500 dedicated staff, we serve more than 10,000 patients every month. Our hospital is equipped with state-of-the-art facilities and the latest medical technologies to provide the best healthcare services.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-user-md fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Experienced Doctors</h5>
+                                    <p class="mb-0">Highly qualified specialists</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-procedures fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Quality Care</h5>
+                                    <p class="mb-0">Patient-centered approach</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-flask fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Modern Technology</h5>
+                                    <p class="mb-0">Advanced diagnostic equipment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-ambulance fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Emergency Services</h5>
+                                    <p class="mb-0">Available 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('about') }}" class="btn btn-primary mt-4">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+<!-- Doctors Section Start -->
+<section class="doctors-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Experienced Doctors</h2>
+            <p>Meet our team of highly qualified medical professionals</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Amit Sharma</h5>
+                        <p>Cardiologist</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Priya Patel</h5>
+                        <p>Neurologist</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Rajesh Singh</h5>
+                        <p>Orthopedic Surgeon</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Neha Gupta</h5>
+                        <p>Gynecologist</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('find_doctor') }}" class="btn btn-primary">View All Doctors</a>
+        </div>
+    </div>
+</section>
+<!-- Doctors Section End -->
+
+<!-- Testimonial Section Start -->
+<section class="testimonial-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Our Patients Say</h2>
+            <p>Read testimonials from our satisfied patients</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-card">
+                <p>"The medical staff at Arvindu Hospitals is top-notch. They made my stay comfortable and provided excellent care. I highly recommend their services to anyone seeking quality healthcare."</p>
+                <div class="client-info">
+                    <div class="client-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="client-details">
+                        <h5>Patient Testimonial</h5>
+                        <p>Heart Surgery Patient</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"I was impressed by the prompt attention and professionalism shown by the doctors and nurses. The hospital facilities are modern and well-maintained. Thank you for the excellent service."</p>
+                <div class="client-info">
+                    <div class="client-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="client-details">
+                        <h5>Patient Testimonial</h5>
+                        <p>Orthopedic Patient</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The doctors explained everything clearly and answered all my questions. The staff was caring and supportive throughout my treatment. I am grateful for the excellent care I received."</p>
+                <div class="client-info">
+                    <div class="client-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="client-details">
+                        <h5>Patient Testimonial</h5>
+                        <p>Neurology Patient</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+
+<!-- Blog Section Start -->
+<section class="blog-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Health Blog & News</h2>
+            <p>Stay updated with the latest health tips and medical news</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-notes-medical fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">June 10, 2023</span>
+                        <h5>Tips for Maintaining Heart Health</h5>
+                        <p>Learn about simple lifestyle changes that can significantly improve your heart health and reduce the risk of cardiovascular diseases.</p>
+                        <a href="{{ url_for('blog') }}" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-notes-medical fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">May 25, 2023</span>
+                        <h5>Understanding Diabetes Management</h5>
+                        <p>Discover effective strategies for managing diabetes, including diet, exercise, medication, and regular monitoring of blood sugar levels.</p>
+                        <a href="{{ url_for('blog') }}" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-notes-medical fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">May 12, 2023</span>
+                        <h5>Importance of Preventive Healthcare</h5>
+                        <p>Explore the benefits of preventive healthcare and how regular check-ups can help detect health issues early for better treatment outcomes.</p>
+                        <a href="{{ url_for('blog') }}" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('blog') }}" class="btn btn-primary">View All Posts</a>
+        </div>
+    </div>
+</section>
+<!-- Blog Section End -->
+
+<!-- Appointment Section Start -->
+<section class="appointment-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="appointment-form">
+                    <h3 class="mb-4">Book an Appointment</h3>
+                    <form action="{{ url_for('appointment') }}" method="get">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Select Department</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                    <option value="pediatrics">Pediatrics</option>
+                                    <option value="gynecology">Gynecology</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Select Doctor</option>
+                                    <option value="dr_sharma">Dr. Sharma</option>
+                                    <option value="dr_patel">Dr. Patel</option>
+                                    <option value="dr_singh">Dr. Singh</option>
+                                    <option value="dr_gupta">Dr. Gupta</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Select Time</option>
+                                    <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                                    <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+                                    <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Your Message (Optional)"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-info">
+                    <h3 class="mb-4">Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Our Locations</h5>
+                            <p>Patna: Main City Road, Patna, Bihar</p>
+                            <p>Chapra: Hospital Road, Chapra, Bihar</p>
+                            <p>Jamui: Medical Center, Jamui, Bihar</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Phone Numbers</h5>
+                            <p>Emergency: +91 123 456 7890</p>
+                            <p>Appointment: +91 987 654 3210</p>
+                            <p>General Inquiries: +91 456 789 0123</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Working Hours</h5>
+                            <p>Emergency Services: 24/7</p>
+                            <p>OPD Hours: 9:00 AM - 8:00 PM</p>
+                            <p>Laboratory: 7:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Appointment Section End -->
+{% endblock %}

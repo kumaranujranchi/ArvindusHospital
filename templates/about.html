@@ -1,326 +1,352 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}About Us - Arvindu Hospitals{% endblock %}
 
 {% block content %}
-<!-- Page Header -->
-<section class="hero" style="padding: 6rem 0;">
-    <div class="container hero-content">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h1>About Arvindu Hospitals</h1>
-                <p>Learn about our journey, mission, vision, and values that drive our commitment to healthcare excellence.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section class="section">
+<!-- Page Header Start -->
+<div class="page-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="section-title text-start">
-                    <h2>Our Story</h2>
-                </div>
-                <p>Arvindu Hospitals was established in 2005 with a vision to provide accessible, affordable, and high-quality healthcare services to the communities of Bihar. What started as a small clinic in Patna has now expanded to three major branches across Patna, Chapra, and Jamui.</p>
-                <p>Over the years, we have grown into a multi-specialty hospital with state-of-the-art facilities and a team of experienced medical professionals. Our journey has been marked by continuous improvement, expansion of services, and implementation of the latest medical technologies.</p>
-                <p>Today, Arvindu Hospitals stands as a testament to our commitment to healthcare excellence and our dedication to serving the people of Bihar with compassion and integrity.</p>
-            </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-6 mb-4">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <h3>2005</h3>
-                            <p>Year Established</p>
-                        </div>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fas fa-user-md"></i>
-                            </div>
-                            <h3>50+</h3>
-                            <p>Qualified Doctors</p>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fas fa-hospital"></i>
-                            </div>
-                            <h3>3</h3>
-                            <p>Hospital Branches</p>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fas fa-bed"></i>
-                            </div>
-                            <h3>200+</h3>
-                            <p>Hospital Beds</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-12">
+                <h1>About Us</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
-</section>
+</div>
+<!-- Page Header End -->
 
-<!-- Mission & Vision Section -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="section-title text-start">
-                    <h2>Our Mission</h2>
-                </div>
-                <p>At Arvindu Hospitals, our mission is to deliver exceptional healthcare services with compassion, integrity, and excellence. We strive to:</p>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-check-circle text-primary me-2"></i> Provide accessible and affordable healthcare to all sections of society</li>
-                    <li><i class="fas fa-check-circle text-primary me-2"></i> Deliver patient-centered care that respects the diversity, dignity, and needs of each individual</li>
-                    <li><i class="fas fa-check-circle text-primary me-2"></i> Maintain the highest standards of medical practice and ethics</li>
-                    <li><i class="fas fa-check-circle text-primary me-2"></i> Continuously improve our services through innovation and research</li>
-                    <li><i class="fas fa-check-circle text-primary me-2"></i> Create a supportive environment for our healthcare professionals to excel</li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <div class="section-title text-start">
-                    <h2>Our Vision</h2>
-                </div>
-                <p>We envision Arvindu Hospitals as:</p>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-check-circle text-secondary me-2"></i> A leading healthcare institution recognized for excellence in patient care</li>
-                    <li><i class="fas fa-check-circle text-secondary me-2"></i> A center of medical innovation and advanced treatments</li>
-                    <li><i class="fas fa-check-circle text-secondary me-2"></i> A place where patients feel cared for and respected</li>
-                    <li><i class="fas fa-check-circle text-secondary me-2"></i> A nurturing environment for healthcare professionals to grow and develop</li>
-                    <li><i class="fas fa-check-circle text-secondary me-2"></i> A pillar of support for community health and wellness</li>
-                </ul>
-                <p class="mt-3">Our vision is to transform healthcare delivery in Bihar by setting new standards of medical excellence and compassionate care.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Core Values Section -->
-<section class="section">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>Our Core Values</h2>
-            <p>The principles that guide our decisions, actions, and interactions</p>
-        </div>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="feature-box text-center h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Compassion</h3>
-                    <p>We treat each patient with kindness, empathy, and respect, understanding that illness affects not just the body but the whole person.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="feature-box text-center h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Integrity</h3>
-                    <p>We uphold the highest standards of honesty, transparency, and ethical conduct in all our actions and decisions.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="feature-box text-center h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Excellence</h3>
-                    <p>We strive for excellence in every aspect of our service, continuously improving our skills, knowledge, and processes.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="feature-box text-center h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Teamwork</h3>
-                    <p>We believe in the power of collaboration, working together across disciplines to provide comprehensive care.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="feature-box text-center h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation</h3>
-                    <p>We embrace innovation and new technologies to enhance our diagnostic capabilities and treatment options.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="feature-box text-center h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Community Service</h3>
-                    <p>We are committed to serving our community through health education, preventive care, and outreach programs.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Locations Section -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>Our Locations</h2>
-            <p>Serving communities across Bihar with three state-of-the-art facilities</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <div class="department-card h-100">
-                    <div class="department-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Patna</h3>
-                    <p><strong>Address:</strong> Medical Corridor, Patna, Bihar</p>
-                    <p><strong>Phone:</strong> +91 123 456 7890</p>
-                    <p><strong>Email:</strong> patna@arvinduhospitals.com</p>
-                    <p>Our flagship facility equipped with the latest medical technology and a comprehensive range of specialties.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="department-card h-100">
-                    <div class="department-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Chapra</h3>
-                    <p><strong>Address:</strong> Hospital Road, Chapra, Bihar</p>
-                    <p><strong>Phone:</strong> +91 234 567 8901</p>
-                    <p><strong>Email:</strong> chapra@arvinduhospitals.com</p>
-                    <p>A modern facility serving the healthcare needs of Chapra and surrounding areas with a focus on accessible care.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="department-card h-100">
-                    <div class="department-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Jamui</h3>
-                    <p><strong>Address:</strong> Health District, Jamui, Bihar</p>
-                    <p><strong>Phone:</strong> +91 345 678 9012</p>
-                    <p><strong>Email:</strong> jamui@arvinduhospitals.com</p>
-                    <p>Our newest facility bringing quality healthcare to Jamui with a team of dedicated professionals.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Leadership Team Section -->
-<section class="section">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>Our Leadership Team</h2>
-            <p>Meet the experienced professionals guiding Arvindu Hospitals</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="doctor-info">
-                        <h4>Dr. Arvind Kumar</h4>
-                        <p class="speciality">Founder & Chairman</p>
-                        <div class="doctor-details">
-                            <p>MBBS, MS, FRCS</p>
-                            <p>25+ Years Experience</p>
-                        </div>
-                        <div class="doctor-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="doctor-info">
-                        <h4>Dr. Meena Sinha</h4>
-                        <p class="speciality">Medical Director</p>
-                        <div class="doctor-details">
-                            <p>MBBS, MD, DM</p>
-                            <p>20+ Years Experience</p>
-                        </div>
-                        <div class="doctor-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="doctor-info">
-                        <h4>Mr. Rajiv Verma</h4>
-                        <p class="speciality">Chief Operations Officer</p>
-                        <div class="doctor-details">
-                            <p>MBA, Hospital Administration</p>
-                            <p>15+ Years Experience</p>
-                        </div>
-                        <div class="doctor-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="doctor-info">
-                        <h4>Ms. Priya Joshi</h4>
-                        <p class="speciality">Chief Nursing Officer</p>
-                        <div class="doctor-details">
-                            <p>MSc. Nursing</p>
-                            <p>18+ Years Experience</p>
-                        </div>
-                        <div class="doctor-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="section bg-primary text-white">
+<!-- About Section Start -->
+<section class="about-section py-80">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="text-white">Ready to experience our care?</h2>
-                <p class="text-white mb-0">Book an appointment with our specialists or visit one of our facilities.</p>
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="about-img">
+                    <div style="height: 450px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                        <i class="fas fa-hospital-alt fa-5x" style="color: #ccc;"></i>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 text-lg-end">
-                <a href="{{ url_for('appointment') }}" class="btn btn-light btn-lg me-2 mb-2 mb-md-0">Book Appointment</a>
-                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Contact Us</a>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2>Welcome to Arvindu Hospitals</h2>
+                    <p>Established in 2005, Arvindu Hospitals has grown to become one of the leading multi-specialty healthcare providers in Bihar with three branches in Patna, Chapra, and Jamui. Our mission is to deliver excellent medical services with compassion and care.</p>
+                    <p>With state-of-the-art facilities and a team of highly qualified doctors, we are committed to providing the highest standard of medical care to our patients. We believe in a patient-centered approach and strive to make healthcare accessible to all.</p>
+                    <p>Our dedicated team of medical professionals works tirelessly to ensure that each patient receives personalized attention and the best possible treatment. We continuously invest in advanced medical technologies and training to stay at the forefront of healthcare innovation.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<!-- About Section End -->
+
+<!-- Vision Mission Section Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted healthcare provider, recognized for clinical excellence, compassionate patient care, and innovative medical solutions. We aspire to improve the health and well-being of the communities we serve and set new standards in healthcare delivery.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide accessible, high-quality healthcare services with compassion and integrity. We are committed to patient safety, clinical excellence, and continuous improvement. Our goal is to enhance the health and quality of life of our patients through dedicated service and advanced medical care.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Vision Mission Section End -->
+
+<!-- Values Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Core Values</h2>
+            <p>The principles that guide our practice and care</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Compassion</h4>
+                    <p>We provide care with kindness, empathy, and respect for the dignity of each individual. We understand that illness can be a challenging time and strive to make our patients as comfortable as possible.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p>We are committed to achieving the highest standards of healthcare through continuous learning, research, and innovation. Our team of healthcare professionals is dedicated to delivering the best possible outcomes for our patients.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4>Integrity</h4>
+                    <p>We adhere to the highest ethical standards and practice with honesty, transparency, and accountability. We believe in doing what's right for our patients, colleagues, and community.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Teamwork</h4>
+                    <p>We collaborate effectively across disciplines to ensure comprehensive and coordinated care. We value the diverse perspectives and skills of our team members and work together to achieve common goals.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>We embrace change and continuously seek new and better ways to improve our services. We invest in advanced technologies and evidence-based practices to enhance the quality of care we provide.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>Community Service</h4>
+                    <p>We are committed to making a positive impact in the communities we serve through health education, outreach programs, and charitable initiatives. We believe in giving back to society and promoting public health.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Values Section End -->
+
+<!-- History Timeline Section Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Journey</h2>
+            <p>From humble beginnings to a leading healthcare provider</p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="timeline">
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <div class="service-card">
+                                <h4>2005 - The Beginning</h4>
+                                <p>Arvindu Hospitals was established in Patna with a small team of dedicated doctors and a vision to provide quality healthcare services to the community. The initial facility had 50 beds and basic medical departments.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <div class="service-card">
+                                <h4>2010 - Expansion</h4>
+                                <p>Due to growing demand, Arvindu Hospitals expanded its facilities and added new specialties. The bed capacity was increased to 100, and advanced diagnostic equipment was installed to enhance the quality of care.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <div class="service-card">
+                                <h4>2015 - New Branches</h4>
+                                <p>Arvindu Hospitals opened two new branches in Chapra and Jamui to extend its services to more communities. Each facility was equipped with modern medical technology and staffed with skilled healthcare professionals.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <div class="service-card">
+                                <h4>2020 - Modern Healthcare</h4>
+                                <p>The hospital underwent a digital transformation with the implementation of electronic medical records and telemedicine services. New departments were added, and existing ones were upgraded with cutting-edge equipment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- History Timeline Section End -->
+
+<!-- Team Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Leadership Team</h2>
+            <p>Meet the visionaries behind Arvindu Hospitals</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Arvind Kumar</h5>
+                        <p>Founder & Chairman</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Sunita Verma</h5>
+                        <p>Medical Director</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-tie fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Rajiv Mehta</h5>
+                        <p>Chief Operating Officer</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-nurse fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Meera Singh</h5>
+                        <p>Chief Nursing Officer</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+
+<!-- Stats Section Start -->
+<section class="py-80 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-6 text-center mb-4 mb-md-0">
+                <div class="display-4 mb-2">3</div>
+                <h5>Hospital Branches</h5>
+            </div>
+            <div class="col-md-3 col-6 text-center mb-4 mb-md-0">
+                <div class="display-4 mb-2">100+</div>
+                <h5>Specialist Doctors</h5>
+            </div>
+            <div class="col-md-3 col-6 text-center mb-4 mb-md-0">
+                <div class="display-4 mb-2">500+</div>
+                <h5>Dedicated Staff</h5>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <div class="display-4 mb-2">10K+</div>
+                <h5>Patients Monthly</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Stats Section End -->
+
+<!-- Testimonial Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Testimonials</h2>
+            <p>What our patients say about us</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"I was admitted to Arvindu Hospital for a cardiac procedure. The entire staff, from the doctors to the nurses and support personnel, provided exceptional care. The facility is modern and well-maintained. I am grateful for the professional and compassionate care I received."</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"The doctors at Arvindu Hospital are extremely knowledgeable and took the time to explain my condition and treatment options. The nursing staff was attentive and responsive to my needs. The hospital environment is clean and conducive to recovery. I highly recommend this hospital."</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('testimonials') }}" class="btn btn-primary">View More Testimonials</a>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
 {% endblock %}

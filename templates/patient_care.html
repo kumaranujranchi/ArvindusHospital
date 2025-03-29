@@ -1,0 +1,296 @@
+{% extends 'layout.html' %}
+
+{% block title %}Patient Care - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Patient Care</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Patient Care</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Patient Care Overview Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Patient-Centered Care</h2>
+            <p>We are committed to providing compassionate and personalized care</p>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div style="height: 450px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                    <i class="fas fa-user-nurse fa-5x" style="color: #ccc;"></i>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3>Our Approach to Patient Care</h3>
+                <p>At Arvindu Hospitals, we believe that every patient deserves personalized attention and care. Our patient-centered approach focuses on treating not just the illness but the whole person, taking into account individual needs, preferences, and values.</p>
+                <p>We strive to create a healing environment where patients feel respected, informed, and involved in their care decisions. Our teams of healthcare professionals work collaboratively to ensure that each patient receives comprehensive care of the highest quality.</p>
+                <p>From admission to discharge and follow-up, we aim to make your healthcare journey as comfortable and stress-free as possible. Our dedicated staff is available around the clock to address your concerns and provide support when you need it most.</p>
+                <div class="mt-4">
+                    <a href="{{ url_for('appointment') }}" class="btn btn-primary me-3">Book an Appointment</a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Patient Care Overview End -->
+
+<!-- Patient Services Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Patient Services</h2>
+            <p>Comprehensive services designed to meet your healthcare needs</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h4>Inpatient Services</h4>
+                    <p>Our inpatient services provide 24/7 nursing care, comfortable accommodations, and comprehensive medical attention for patients requiring overnight stays. We offer private, semi-private, and general ward options with amenities designed for comfort and recovery.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h4>Outpatient Services</h4>
+                    <p>Our outpatient services offer convenient access to medical care without hospitalization. We provide consultations, diagnostic tests, minor procedures, and follow-up care on a same-day basis, allowing patients to return home after treatment.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h4>Emergency Care</h4>
+                    <p>Our emergency department is staffed with experienced physicians and nurses ready to provide immediate care for critical conditions. We utilize advanced technology and follow established protocols to deliver prompt and effective emergency treatment.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <h4>Diagnostic Services</h4>
+                    <p>Our comprehensive diagnostic services include laboratory testing, medical imaging (X-ray, Ultrasound, CT, MRI), cardiac diagnostics, and other specialized tests. Our state-of-the-art equipment ensures accurate results for proper diagnosis and treatment planning.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h4>Surgical Services</h4>
+                    <p>Our surgical services encompass pre-operative evaluation, intra-operative care, and post-operative recovery. Our surgeons are skilled in various procedures, from minimally invasive techniques to complex surgeries, always prioritizing patient safety and outcomes.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h4>Preventive Care</h4>
+                    <p>Our preventive care services focus on maintaining good health and preventing illness. We offer health screenings, immunizations, health education, and lifestyle counseling to help patients stay healthy and detect potential issues early.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Patient Services End -->
+
+<!-- Patient Amenities Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Patient Amenities</h2>
+            <p>Comfort and convenience during your stay with us</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon me-3" style="font-size: 2rem;">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h4 class="mb-0">Accommodation Options</h4>
+                    </div>
+                    <p>We offer various room options to meet different needs and budgets:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Deluxe Rooms: Private rooms with attached bathrooms, TV, WiFi, and attendant accommodation</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Semi-Private Rooms: Shared rooms with two beds, offering a balance of privacy and affordability</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>General Wards: Economical option with multiple beds in a shared space</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>ICU/CCU: Specialized care units with advanced monitoring equipment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon me-3" style="font-size: 2rem;">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 class="mb-0">Nutrition Services</h4>
+                    </div>
+                    <p>Our dietary services cater to both nutritional needs and personal preferences:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Customized meal plans based on medical conditions and dietary restrictions</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Consultation with nutritionists to ensure balanced and appropriate nutrition</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Special diets for patients with specific health conditions</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Cafeteria services for visitors and outpatients</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon me-3" style="font-size: 2rem;">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h4 class="mb-0">Support Services</h4>
+                    </div>
+                    <p>We provide various support services to enhance patient comfort:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Patient attendant services for additional assistance</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Interpreter services for patients with language barriers</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Patient transport within the hospital</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Discharge planning and coordination</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon me-3" style="font-size: 2rem;">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 class="mb-0">Facility Amenities</h4>
+                    </div>
+                    <p>Our hospital provides various conveniences for patients and visitors:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>On-site pharmacy for medication needs</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>ATM services for financial convenience</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Prayer room for spiritual needs</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Waiting lounges for visitors with comfortable seating</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Patient Amenities End -->
+
+<!-- Patient Education Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Patient Education</h2>
+            <p>Empowering patients with knowledge for better health outcomes</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h4>Understanding Your Medical Condition</h4>
+                    <p>Knowledge about your medical condition helps you make informed decisions about your care. Our healthcare providers take time to explain diagnoses, treatment options, and expected outcomes in clear, understandable terms. We encourage patients to ask questions and participate actively in their care planning.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h4>Medication Management</h4>
+                    <p>Understanding your medications is crucial for effective treatment. Our healthcare team provides detailed information about prescribed medications, including purpose, dosage, timing, potential side effects, and important precautions. Our pharmacists are available to address any questions or concerns about your medications.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h4>Preventive Care Guidelines</h4>
+                    <p>Prevention is better than cure. We provide guidance on preventive health measures, including recommended screenings based on age, gender, and risk factors. Our health education materials cover topics like nutrition, exercise, stress management, and lifestyle modifications to prevent disease and promote wellness.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h4>Discharge Instructions</h4>
+                    <p>Clear discharge instructions are essential for continued recovery at home. Before leaving the hospital, patients receive comprehensive instructions about follow-up care, medication schedules, activity restrictions, dietary guidelines, potential complications to watch for, and when to seek medical attention. Our staff ensures you understand these instructions fully.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <a href="{{ url_for('blog') }}" class="btn btn-primary">Visit Our Health Blog</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Patient Education End -->
+
+<!-- Patient Rights Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Patient Rights & Responsibilities</h2>
+            <p>Understanding your rights and responsibilities as a patient</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="service-card">
+                    <h4>Your Rights as a Patient</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Respectful Care:</strong> You have the right to considerate, respectful care regardless of your race, religion, gender, ethnicity, or source of payment.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Information:</strong> You have the right to clear information about your diagnosis, treatment options, and prognosis in terms you can understand.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Informed Consent:</strong> You have the right to be involved in decisions about your care and to provide informed consent before any procedure.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Privacy:</strong> You have the right to privacy regarding your medical care and medical records.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Confidentiality:</strong> You have the right to expect that all communications and records pertaining to your care will be treated as confidential.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Refuse Treatment:</strong> You have the right to refuse treatment to the extent permitted by law and to be informed of the medical consequences of such refusal.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="service-card">
+                    <h4>Your Responsibilities as a Patient</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Provide Information:</strong> You are responsible for providing accurate and complete information about your health, including past illnesses, hospitalizations, medications, and other matters related to your health.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Follow Treatment Plan:</strong> You are responsible for following the treatment plan recommended by your healthcare provider, including taking medications as prescribed.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Express Concerns:</strong> You are responsible for asking questions when you do not understand information or instructions and for expressing any concerns about your ability to follow the proposed treatment plan.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Hospital Rules:</strong> You are responsible for following hospital rules and regulations concerning patient care and conduct.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Respect Others:</strong> You are responsible for being considerate of the rights of other patients and hospital personnel and for being respectful of the property of other persons and the hospital.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Financial Obligations:</strong> You are responsible for fulfilling the financial obligations associated with your care promptly.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Patient Rights Section End -->
+
+<!-- Patient Feedback Start -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="mb-2">Your Feedback Matters</h2>
+                <p class="mb-0">We value your input to continuously improve our services and patient care.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Share Your Feedback</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Patient Feedback End -->
+{% endblock %}

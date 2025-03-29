@@ -1,0 +1,432 @@
+{% extends 'layout.html' %}
+
+{% block title %}Media & News - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Media & News</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Media & News</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Media Overview Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Press Releases & News</h2>
+            <p>Stay updated with the latest developments at Arvindu Hospitals</p>
+        </div>
+        
+        <!-- Featured News -->
+        <div class="row mb-5">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="blog-card">
+                    <div class="blog-img" style="height: 400px;">
+                        <i class="fas fa-newspaper fa-5x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">July 15, 2023</span>
+                        <h3>Arvindu Hospitals Launches State-of-the-Art Cardiac Care Center</h3>
+                        <p>Arvindu Hospitals is proud to announce the inauguration of our new Comprehensive Cardiac Care Center at our Patna facility. This state-of-the-art center is equipped with the latest technology and staffed by leading cardiologists to provide advanced cardiac care to patients across Bihar.</p>
+                        <p>The center features a modern Cath Lab, advanced diagnostic equipment, dedicated cardiac ICU, and specialized cardiac rehabilitation services. This expansion reflects our commitment to addressing the growing cardiovascular health needs in our community and ensuring that patients have access to world-class cardiac care without having to travel to metropolitan cities.</p>
+                        <a href="#" class="btn btn-primary mt-3">Read Full Press Release</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- News Grid -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card h-100">
+                    <div class="blog-img">
+                        <i class="fas fa-newspaper fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">June 30, 2023</span>
+                        <h5>Arvindu Hospitals Recognized for Excellence in Patient Care</h5>
+                        <p>We are honored to receive the prestigious Healthcare Excellence Award for outstanding patient care and safety standards. This recognition highlights our team's dedication to providing compassionate and high-quality healthcare services.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card h-100">
+                    <div class="blog-img">
+                        <i class="fas fa-newspaper fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">June 15, 2023</span>
+                        <h5>New Pediatric Wing Opens at Chapra Branch</h5>
+                        <p>Arvindu Hospitals has expanded its services with a new dedicated pediatric wing at our Chapra branch. The facility includes child-friendly rooms, specialized equipment, and a team of experienced pediatricians to provide comprehensive care for young patients.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card h-100">
+                    <div class="blog-img">
+                        <i class="fas fa-newspaper fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">May 28, 2023</span>
+                        <h5>Arvindu Hospitals Partners with International Medical Institution</h5>
+                        <p>We are excited to announce our strategic partnership with a renowned international medical institution. This collaboration will facilitate knowledge exchange, advanced training for our medical staff, and access to global best practices in healthcare.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card h-100">
+                    <div class="blog-img">
+                        <i class="fas fa-newspaper fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">May 10, 2023</span>
+                        <h5>Successful Completion of 1000th Minimally Invasive Surgery</h5>
+                        <p>Our surgical team has achieved a significant milestone with the successful completion of the 1000th minimally invasive surgery. This achievement reflects our commitment to adopting advanced surgical techniques that reduce recovery time and improve patient outcomes.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card h-100">
+                    <div class="blog-img">
+                        <i class="fas fa-newspaper fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">April 25, 2023</span>
+                        <h5>Health Awareness Campaign Launched in Rural Areas</h5>
+                        <p>Arvindu Hospitals has initiated a comprehensive health awareness campaign in rural areas surrounding our facilities. This outreach program aims to educate communities about preventive healthcare, common diseases, and the importance of regular health check-ups.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card h-100">
+                    <div class="blog-img">
+                        <i class="fas fa-newspaper fa-4x"></i>
+                    </div>
+                    <div class="blog-details">
+                        <span class="blog-date">April 12, 2023</span>
+                        <h5>Dr. Amit Sharma Presents Research at International Conference</h5>
+                        <p>Our senior cardiologist, Dr. Amit Sharma, presented his groundbreaking research on novel cardiac treatment protocols at the International Cardiology Conference. His work has been recognized for its potential to improve outcomes for patients with complex cardiac conditions.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination -->
+        <nav aria-label="News pagination">
+            <ul class="pagination justify-content-center mt-4">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- Media Overview Section End -->
+
+<!-- Media Gallery Section Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Media Gallery</h2>
+            <p>Visual highlights from events and activities at Arvindu Hospitals</p>
+        </div>
+        
+        <!-- Gallery Filters -->
+        <div class="row mb-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="btn-group w-100" role="group" aria-label="Gallery filters">
+                    <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="events">Events</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="facilities">Facilities</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="csr">CSR Activities</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gallery Grid -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card p-0 overflow-hidden">
+                    <div style="height: 250px; background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-images fa-4x" style="color: #ccc;"></i>
+                    </div>
+                    <div class="p-3">
+                        <h5>Cardiac Center Inauguration</h5>
+                        <p class="mb-0">July 15, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card p-0 overflow-hidden">
+                    <div style="height: 250px; background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-images fa-4x" style="color: #ccc;"></i>
+                    </div>
+                    <div class="p-3">
+                        <h5>Annual Medical Conference</h5>
+                        <p class="mb-0">June 20, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card p-0 overflow-hidden">
+                    <div style="height: 250px; background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-images fa-4x" style="color: #ccc;"></i>
+                    </div>
+                    <div class="p-3">
+                        <h5>New Pediatric Wing</h5>
+                        <p class="mb-0">June 15, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card p-0 overflow-hidden">
+                    <div style="height: 250px; background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-images fa-4x" style="color: #ccc;"></i>
+                    </div>
+                    <div class="p-3">
+                        <h5>Rural Health Camp</h5>
+                        <p class="mb-0">May 5, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card p-0 overflow-hidden">
+                    <div style="height: 250px; background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-images fa-4x" style="color: #ccc;"></i>
+                    </div>
+                    <div class="p-3">
+                        <h5>Blood Donation Drive</h5>
+                        <p class="mb-0">April 30, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card p-0 overflow-hidden">
+                    <div style="height: 250px; background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-images fa-4x" style="color: #ccc;"></i>
+                    </div>
+                    <div class="p-3">
+                        <h5>Doctor's Day Celebration</h5>
+                        <p class="mb-0">April 10, 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-4">
+            <button class="btn btn-primary">Load More</button>
+        </div>
+    </div>
+</section>
+<!-- Media Gallery Section End -->
+
+<!-- Media Coverage Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Media Coverage</h2>
+            <p>Arvindu Hospitals in the news</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 60px; height: 60px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">The Health Times</h5>
+                            <p class="mb-0 text-muted">July 18, 2023</p>
+                        </div>
+                    </div>
+                    <h5>"Arvindu Hospitals Sets New Standards in Cardiac Care"</h5>
+                    <p>The recent inauguration of the Comprehensive Cardiac Care Center at Arvindu Hospitals marks a significant advancement in healthcare infrastructure in Bihar. This facility is expected to address the growing cardiovascular health needs in the region...</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read Full Article</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 60px; height: 60px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Medical Daily</h5>
+                            <p class="mb-0 text-muted">June 25, 2023</p>
+                        </div>
+                    </div>
+                    <h5>"Healthcare Excellence Award Goes to Arvindu Hospitals"</h5>
+                    <p>Arvindu Hospitals has been recognized for its outstanding commitment to patient care and safety standards. The prestigious Healthcare Excellence Award was presented to the hospital management in a ceremony attended by leading healthcare professionals...</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read Full Article</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 60px; height: 60px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Bihar Chronicle</h5>
+                            <p class="mb-0 text-muted">May 30, 2023</p>
+                        </div>
+                    </div>
+                    <h5>"Arvindu Hospitals Partners with Global Medical Institution"</h5>
+                    <p>In a move that will enhance healthcare services in Bihar, Arvindu Hospitals has announced a strategic partnership with a renowned international medical institution. This collaboration aims to bring global healthcare standards and expertise to the region...</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read Full Article</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 60px; height: 60px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Health & Wellness Magazine</h5>
+                            <p class="mb-0 text-muted">May 15, 2023</p>
+                        </div>
+                    </div>
+                    <h5>"Pioneering Minimally Invasive Surgeries: A Milestone for Arvindu Hospitals"</h5>
+                    <p>Arvindu Hospitals has reached a significant milestone with the completion of its 1000th minimally invasive surgery. This achievement highlights the hospital's commitment to adopting advanced surgical techniques that benefit patients through reduced recovery times...</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read Full Article</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Media Coverage Section End -->
+
+<!-- Media Contact Section Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Media Inquiries</h2>
+            <p>For press releases, interviews, and media information</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="service-card">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h4>Media Contact Information</h4>
+                            <p>Our media relations team is available to assist journalists and other media representatives with information about Arvindu Hospitals, expert interviews, facility tours, and other media-related inquiries.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Media Relations Officer</h6>
+                                    <p class="mb-0">Ms. Priya Khanna</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Email</h6>
+                                    <p class="mb-0">media@arvinduhospitals.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Phone</h6>
+                                    <p class="mb-0">+91 123 456 7890</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Media Resources</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="fas fa-file-download text-primary me-2"></i>
+                                        <span>Download Press Kit</span>
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="fas fa-file-download text-primary me-2"></i>
+                                        <span>Hospital Fact Sheet</span>
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="fas fa-file-download text-primary me-2"></i>
+                                        <span>Official Logo Files</span>
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="fas fa-file-download text-primary me-2"></i>
+                                        <span>Executive Profiles</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="fas fa-file-download text-primary me-2"></i>
+                                        <span>Annual Reports</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Media Contact Section End -->
+
+<!-- Media CTA Start -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="mb-2">Subscribe to Our Press Releases</h2>
+                <p class="mb-0">Stay updated with the latest news and developments from Arvindu Hospitals.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <form action="{{ url_for('subscribe') }}" method="post" class="d-flex">
+                    {{ newsletter_form.csrf_token }}
+                    <div class="flex-grow-1 me-2">
+                        {{ newsletter_form.email(class="form-control", placeholder="Enter your email") }}
+                    </div>
+                    <button type="submit" class="btn btn-light">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Media CTA End -->
+{% endblock %}

@@ -1,0 +1,323 @@
+{% extends 'layout.html' %}
+
+{% block title %}Patient Testimonials - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Patient Testimonials</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Testimonial Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Our Patients Say</h2>
+            <p>Real experiences from patients we've served</p>
+        </div>
+        
+        <!-- Featured Testimonials -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 60px; height: 60px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <p class="mb-0">Cardiology Department</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"I was admitted to Arvindu Hospital after experiencing chest pain. Dr. Amit Sharma and his team provided exceptional care during my heart surgery and recovery. The nurses were attentive, compassionate, and professional. The facility is clean and well-maintained. I am grateful for the excellent care I received and would highly recommend Arvindu Hospital to anyone in need of cardiac care."</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 60px; height: 60px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <p class="mb-0">Orthopedics Department</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Following a severe accident, I underwent knee replacement surgery at Arvindu Hospital. Dr. Rajesh Singh's expertise and the rehabilitation team's dedication helped me regain mobility beyond my expectations. From pre-surgery consultations to post-operative care, every aspect of my treatment was handled with professionalism. The staff's encouragement during physical therapy sessions made a difficult recovery process much more manageable."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- More Testimonials -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"My experience with the neurology department at Arvindu Hospital was outstanding. Dr. Priya Patel took the time to thoroughly explain my condition and treatment options. The diagnostic tests were conducted efficiently, and the results were explained clearly. I appreciated the doctor's willingness to answer all my questions and address my concerns."</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"I delivered my baby at Arvindu Hospital, and the care provided by Dr. Neha Gupta and the obstetrics team was exceptional. The delivery room was well-equipped, and the staff was supportive throughout labor and delivery. The postpartum care and breastfeeding support were invaluable for a first-time mother like me."</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"My son was treated in the pediatric department for a respiratory condition. Dr. Kavita Jain was not only a skilled physician but also wonderful with children. She made my son feel comfortable and less anxious about being in a hospital. The child-friendly environment and the caring staff made a significant difference in our experience."</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"I had cataract surgery at Arvindu Hospital, and the results have been life-changing. Dr. Vikas Agarwal's expertise in ophthalmology was evident throughout the process. The surgery was quick and painless, and the improvement in my vision has been remarkable. The follow-up care has been thorough and reassuring."</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"I underwent a dermatological procedure at Arvindu Hospital, and I was impressed by the advanced techniques used by Dr. Sneha Reddy. The staff was professional and made me feel at ease throughout the procedure. The follow-up care was excellent, with clear instructions for post-procedure care and scheduled check-ups."</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3" style="width: 50px; height: 50px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Patient Testimonial</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"I had a chronic sinus condition that significantly affected my quality of life. After consulting with Dr. Prakash Tiwari in the ENT department, I underwent a procedure that has provided tremendous relief. The doctor's expertise and the staff's support throughout my treatment journey were commendable. I'm grateful for the care I received."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Testimonials -->
+        <div class="section-title mt-5">
+            <h2>Video Testimonials</h2>
+            <p>Hear directly from our patients about their experiences</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div style="height: 300px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin-bottom: 20px;">
+                        <i class="fas fa-video fa-5x" style="color: #ccc;"></i>
+                    </div>
+                    <h5>Recovery Journey: A Heart Patient's Story</h5>
+                    <p>"After my bypass surgery at Arvindu Hospital, I've returned to my normal activities with renewed energy. The cardiac rehabilitation program was instrumental in my recovery."</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <div style="height: 300px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin-bottom: 20px;">
+                        <i class="fas fa-video fa-5x" style="color: #ccc;"></i>
+                    </div>
+                    <h5>My Experience with Joint Replacement</h5>
+                    <p>"The orthopedic team at Arvindu Hospital gave me a new lease on life. I can now walk without pain, and their rehabilitation program helped me regain mobility faster than expected."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+
+<!-- Share Your Experience Section Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Share Your Experience</h2>
+            <p>We value your feedback to continuously improve our services</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="service-card">
+                    <form action="#" method="post" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Department</label>
+                            <select class="form-select" id="department" required>
+                                <option value="" selected disabled>Select Department</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="neurology">Neurology</option>
+                                <option value="orthopedics">Orthopedics</option>
+                                <option value="pediatrics">Pediatrics</option>
+                                <option value="gynecology">Gynecology</option>
+                                <option value="ophthalmology">Ophthalmology</option>
+                                <option value="dermatology">Dermatology</option>
+                                <option value="ent">ENT</option>
+                                <option value="general">General Medicine</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Rating</label>
+                            <div class="rating">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="rating5" value="5" required>
+                                    <label class="form-check-label" for="rating5">5 Stars</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="rating4" value="4">
+                                    <label class="form-check-label" for="rating4">4 Stars</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="rating3" value="3">
+                                    <label class="form-check-label" for="rating3">3 Stars</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="rating2" value="2">
+                                    <label class="form-check-label" for="rating2">2 Stars</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="rating1" value="1">
+                                    <label class="form-check-label" for="rating1">1 Star</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="testimonial" class="form-label">Your Experience</label>
+                            <textarea class="form-control" id="testimonial" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="consent" required>
+                            <label class="form-check-label" for="consent">I consent to have my testimonial displayed on the Arvindu Hospitals website and other promotional materials.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Testimonial</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Share Your Experience Section End -->
+
+<!-- Testimonial CTA Start -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="mb-2">Need Medical Assistance?</h2>
+                <p class="mb-0">Our team of expert doctors is ready to provide you with the best healthcare services.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{{ url_for('appointment') }}" class="btn btn-light btn-lg">Book an Appointment</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial CTA End -->
+{% endblock %}

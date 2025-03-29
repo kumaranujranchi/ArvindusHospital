@@ -1,0 +1,409 @@
+{% extends 'layout.html' %}
+
+{% block title %}Find a Doctor - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Find a Doctor</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Find a Doctor</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Doctor Search Section Start -->
+<section class="py-80">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Experienced Doctors</h2>
+            <p>Find the right specialist for your healthcare needs</p>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="search-filter">
+                    <form action="#" method="get">
+                        <div class="row">
+                            <div class="col-md-8 mb-3 mb-md-0">
+                                <select id="departmentFilter" class="form-select">
+                                    <option value="all">All Departments</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                    <option value="pediatrics">Pediatrics</option>
+                                    <option value="gynecology">Gynecology</option>
+                                    <option value="ophthalmology">Ophthalmology</option>
+                                    <option value="dermatology">Dermatology</option>
+                                    <option value="ent">ENT</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary w-100">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Cardiology Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="cardiology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Amit Sharma</h5>
+                        <p>Cardiology</p>
+                        <p class="small text-muted">MBBS, MD (Cardiology), DM</p>
+                        <p class="small">Experience: 15+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="cardiology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Shikha Mishra</h5>
+                        <p>Cardiology</p>
+                        <p class="small text-muted">MBBS, MD (Cardiology)</p>
+                        <p class="small">Experience: 12+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Neurology Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="neurology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Priya Patel</h5>
+                        <p>Neurology</p>
+                        <p class="small text-muted">MBBS, MD (Neurology), DM</p>
+                        <p class="small">Experience: 10+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="neurology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Arun Kumar</h5>
+                        <p>Neurology</p>
+                        <p class="small text-muted">MBBS, MD (Neurology)</p>
+                        <p class="small">Experience: 8+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Orthopedics Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="orthopedics">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Rajesh Singh</h5>
+                        <p>Orthopedic Surgery</p>
+                        <p class="small text-muted">MBBS, MS (Orthopedics)</p>
+                        <p class="small">Experience: 14+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="orthopedics">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Manoj Verma</h5>
+                        <p>Orthopedic Surgery</p>
+                        <p class="small text-muted">MBBS, DNB (Orthopedics)</p>
+                        <p class="small">Experience: 11+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pediatrics Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="pediatrics">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Kavita Jain</h5>
+                        <p>Pediatrics</p>
+                        <p class="small text-muted">MBBS, MD (Pediatrics)</p>
+                        <p class="small">Experience: 9+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="pediatrics">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Sunil Mehta</h5>
+                        <p>Pediatrics</p>
+                        <p class="small text-muted">MBBS, DCH, MD (Pediatrics)</p>
+                        <p class="small">Experience: 13+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gynecology Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="gynecology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Neha Gupta</h5>
+                        <p>Gynecology</p>
+                        <p class="small text-muted">MBBS, MS (Gynecology)</p>
+                        <p class="small">Experience: 12+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="gynecology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Ritu Saxena</h5>
+                        <p>Gynecology</p>
+                        <p class="small text-muted">MBBS, DNB (Gynecology)</p>
+                        <p class="small">Experience: 10+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ophthalmology Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="ophthalmology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Vikas Agarwal</h5>
+                        <p>Ophthalmology</p>
+                        <p class="small text-muted">MBBS, MS (Ophthalmology)</p>
+                        <p class="small">Experience: 15+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dermatology Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="dermatology">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Sneha Reddy</h5>
+                        <p>Dermatology</p>
+                        <p class="small text-muted">MBBS, MD (Dermatology)</p>
+                        <p class="small">Experience: 8+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ENT Doctors -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="doctor-card" data-department="ent">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md fa-5x"></i>
+                    </div>
+                    <div class="doctor-details">
+                        <h5>Dr. Prakash Tiwari</h5>
+                        <p>ENT Specialist</p>
+                        <p class="small text-muted">MBBS, MS (ENT)</p>
+                        <p class="small">Experience: 11+ Years</p>
+                        <div class="doctor-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary btn-sm mt-3">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Doctor Search Section End -->
+
+<!-- Why Choose Section Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Our Doctors</h2>
+            <p>Expert healthcare professionals committed to your well-being</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h4>Experienced Specialists</h4>
+                    <p>Our doctors are highly qualified specialists with extensive training and experience in their respective fields. Many have received training at prestigious institutions both nationally and internationally.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h4>Patient-Centered Care</h4>
+                    <p>Our doctors prioritize patient comfort and well-being. They take the time to listen to your concerns, explain diagnoses clearly, and work with you to develop personalized treatment plans.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Continuous Learning</h4>
+                    <p>Our doctors stay updated with the latest medical advancements and research through continuing education and participation in professional conferences and workshops.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h4>Advanced Technology</h4>
+                    <p>Our doctors utilize state-of-the-art medical technologies and equipment for accurate diagnosis and effective treatment. They are trained in the latest medical procedures and techniques.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>Collaborative Approach</h4>
+                    <p>Our doctors work as a team, collaborating across specialties to provide comprehensive care for complex medical conditions. This multidisciplinary approach ensures the best possible outcomes for patients.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>Effective Communication</h4>
+                    <p>Our doctors believe in clear, transparent communication. They explain medical conditions and treatment options in simple terms, address questions, and ensure you fully understand your healthcare journey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Choose Section End -->
+
+<!-- Appointment CTA Start -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="mb-2">Need to Schedule an Appointment?</h2>
+                <p class="mb-0">Our doctors are available for consultations. Book your appointment today.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{{ url_for('appointment') }}" class="btn btn-light btn-lg">Book an Appointment</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Appointment CTA End -->
+{% endblock %}

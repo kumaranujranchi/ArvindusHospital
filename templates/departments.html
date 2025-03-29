@@ -1,41 +1,47 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}Departments & Specialties - Arvindu Hospitals{% endblock %}
 
 {% block content %}
-<!-- Page Header -->
-<section class="hero" style="padding: 6rem 0;">
-    <div class="container hero-content">
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
+            <div class="col-12">
                 <h1>Departments & Specialties</h1>
-                <p>Explore our comprehensive range of medical specialties and services designed to provide you with complete healthcare solutions.</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Departments</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
-</section>
+</div>
+<!-- Page Header End -->
 
-<!-- Departments Overview Section -->
-<section class="section">
+<!-- Departments Section Start -->
+<section class="departments-page py-80">
     <div class="container">
-        <div class="section-title text-center">
+        <div class="section-title">
             <h2>Our Medical Departments</h2>
-            <p>At Arvindu Hospitals, we offer specialized care across various medical disciplines, each equipped with advanced technology and expert healthcare professionals.</p>
+            <p>Comprehensive healthcare services under one roof</p>
         </div>
-        
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="department-card">
                     <div class="department-icon">
                         <i class="fas fa-heartbeat"></i>
                     </div>
-                    <h3>Cardiology</h3>
-                    <p>Our Cardiology Department provides comprehensive diagnosis and treatment for heart conditions, including preventive care, interventional procedures, and cardiac rehabilitation.</p>
+                    <h4>Cardiology</h4>
+                    <p>Our cardiology department provides comprehensive diagnosis and treatment for all types of heart diseases. Our team of experienced cardiologists utilizes advanced technologies to deliver the best cardiac care.</p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Cardiac Consultation</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> ECG & Echocardiography</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Angiography & Angioplasty</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Cardiac Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Echocardiography</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Electrocardiogram (ECG)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Cardiac Catheterization</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Coronary Angioplasty</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Cardiac Rehabilitation</li>
                     </ul>
                 </div>
             </div>
@@ -44,13 +50,14 @@
                     <div class="department-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Neurology</h3>
-                    <p>Our Neurology Department specializes in the diagnosis and treatment of disorders of the nervous system, including the brain, spinal cord, and peripheral nerves.</p>
+                    <h4>Neurology</h4>
+                    <p>Our neurology department specializes in the diagnosis and treatment of disorders of the nervous system, including the brain, spinal cord, and peripheral nerves. Our neurologists are experts in managing complex neurological conditions.</p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Neurological Consultation</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> EEG & EMG</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Stroke Management</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Neurosurgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Electroencephalography (EEG)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Electromyography (EMG)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Neuroimaging</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Stroke Management</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Epilepsy Treatment</li>
                     </ul>
                 </div>
             </div>
@@ -59,13 +66,14 @@
                     <div class="department-icon">
                         <i class="fas fa-bone"></i>
                     </div>
-                    <h3>Orthopedics</h3>
-                    <p>Our Orthopedics Department focuses on conditions affecting the musculoskeletal system, providing treatments for bone, joint, ligament, and muscle disorders.</p>
+                    <h4>Orthopedics</h4>
+                    <p>Our orthopedic department focuses on the diagnosis, treatment, rehabilitation, and prevention of injuries and diseases of the musculoskeletal system. We offer comprehensive care for bone, joint, and muscle conditions.</p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Orthopedic Consultation</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Joint Replacement</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Sports Injuries</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Spine Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Joint Replacement Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Arthroscopy</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Fracture Treatment</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Sports Injury Management</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Physical Therapy</li>
                     </ul>
                 </div>
             </div>
@@ -74,43 +82,14 @@
                     <div class="department-icon">
                         <i class="fas fa-baby"></i>
                     </div>
-                    <h3>Pediatrics</h3>
-                    <p>Our Pediatrics Department provides comprehensive healthcare for infants, children, and adolescents, from preventive care to treatment of complex pediatric conditions.</p>
+                    <h4>Pediatrics</h4>
+                    <p>Our pediatric department provides specialized healthcare for infants, children, and adolescents. Our pediatricians are committed to the health and well-being of young patients in a child-friendly environment.</p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Well-Child Visits</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Vaccinations</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Pediatric Specialties</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Pediatric Surgery</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="department-card">
-                    <div class="department-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Ophthalmology</h3>
-                    <p>Our Ophthalmology Department specializes in eye care, offering comprehensive eye examinations, diagnosis, and treatment of eye disorders and diseases.</p>
-                    <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Eye Examinations</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Cataract Surgery</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Glaucoma Treatment</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> LASIK Surgery</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="department-card">
-                    <div class="department-icon">
-                        <i class="fas fa-allergies"></i>
-                    </div>
-                    <h3>Dermatology</h3>
-                    <p>Our Dermatology Department focuses on the diagnosis and treatment of conditions related to the skin, hair, and nails, from common skin problems to complex dermatological diseases.</p>
-                    <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Skin Consultations</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Allergy Testing</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Cosmetic Dermatology</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Dermatological Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Well-Baby Check-ups</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Immunizations</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Growth and Development Monitoring</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Pediatric Emergency Care</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Childhood Disease Management</li>
                     </ul>
                 </div>
             </div>
@@ -119,13 +98,46 @@
                     <div class="department-icon">
                         <i class="fas fa-venus"></i>
                     </div>
-                    <h3>Gynecology</h3>
-                    <p>Our Gynecology Department offers comprehensive women's health services, from routine check-ups to specialized treatments for reproductive health issues.</p>
+                    <h4>Gynecology</h4>
+                    <p>Our gynecology department offers comprehensive care for women's reproductive health. Our gynecologists provide preventive care, diagnosis, and treatment for a wide range of gynecological conditions.</p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Women's Health Check-ups</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Obstetric Care</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Gynecological Surgery</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Fertility Services</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Preventive Care and Screenings</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Family Planning</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Menopause Management</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Gynecological Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Infertility Evaluation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4>Ophthalmology</h4>
+                    <p>Our ophthalmology department specializes in the diagnosis and treatment of eye disorders. Our ophthalmologists are skilled in managing various eye conditions and performing surgical procedures to restore and improve vision.</p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Comprehensive Eye Exams</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Cataract Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Glaucoma Treatment</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Diabetic Eye Care</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Refractive Surgery</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-allergies"></i>
+                    </div>
+                    <h4>Dermatology</h4>
+                    <p>Our dermatology department focuses on the diagnosis and treatment of skin, hair, and nail disorders. Our dermatologists provide medical and cosmetic dermatological services for patients of all ages.</p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Skin Disease Treatment</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Skin Cancer Screening</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Acne Treatment</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Dermatologic Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Aesthetic Procedures</li>
                     </ul>
                 </div>
             </div>
@@ -134,145 +146,271 @@
                     <div class="department-icon">
                         <i class="fas fa-kidneys"></i>
                     </div>
-                    <h3>Urology</h3>
-                    <p>Our Urology Department specializes in the diagnosis and treatment of urinary tract and reproductive system disorders in men and urinary tract disorders in women.</p>
+                    <h4>Urology</h4>
+                    <p>Our urology department specializes in the diagnosis and treatment of disorders of the urinary tract and male reproductive system. Our urologists utilize advanced techniques to provide comprehensive urological care.</p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Urological Consultations</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Kidney Stone Treatment</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Prostate Care</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Urological Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Kidney Stone Treatment</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Urinary Tract Infection Management</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Prostate Health</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Urological Surgery</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Male Infertility Evaluation</li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="department-card">
                     <div class="department-icon">
-                        <i class="fas fa-ear-listen"></i>
+                        <i class="fas fa-ear-deaf"></i>
                     </div>
-                    <h3>ENT (Ear, Nose, Throat)</h3>
-                    <p>Our ENT Department provides diagnosis and treatment for conditions affecting the ears, nose, throat, head, and neck, from common infections to complex surgical cases.</p>
+                    <h4>ENT</h4>
+                    <p>Our ENT (Ear, Nose, and Throat) department specializes in the diagnosis and treatment of disorders of the ear, nose, throat, and related structures of the head and neck. Our ENT specialists provide comprehensive care for patients of all ages.</p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> ENT Consultations</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Hearing Tests</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Sinus Treatments</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> ENT Surgery</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 mx-auto">
-                <div class="department-card">
-                    <div class="department-icon">
-                        <i class="fas fa-tooth"></i>
-                    </div>
-                    <h3>Dental</h3>
-                    <p>Our Dental Department offers comprehensive dental care services, from routine check-ups and cleanings to advanced dental procedures and surgeries.</p>
-                    <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Dental Check-ups</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Cosmetic Dentistry</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Root Canal Treatment</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i> Orthodontics</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Hearing Evaluation</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Sinus Disease Treatment</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Voice and Swallowing Disorders</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Sleep Apnea Management</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>ENT Surgery</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- Departments Section End -->
 
-<!-- Special Programs Section -->
-<section class="section bg-light">
+<!-- Facilities Section Start -->
+<section class="py-80 bg-light">
     <div class="container">
-        <div class="section-title text-center">
-            <h2>Special Programs & Centers of Excellence</h2>
-            <p>Advanced healthcare initiatives and specialized centers at Arvindu Hospitals</p>
+        <div class="section-title">
+            <h2>Our Medical Facilities</h2>
+            <p>State-of-the-art equipment and infrastructure for optimal care</p>
         </div>
         <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="feature-box h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart-pulse"></i>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
                     </div>
-                    <h3>Cardiac Care Center</h3>
-                    <p>Our specialized Cardiac Care Center is equipped with state-of-the-art technology for comprehensive heart care, from prevention to advanced interventions and rehabilitation programs. Our team of cardiologists and cardiac surgeons work together to provide the best outcomes for patients with heart conditions.</p>
+                    <h4>Laboratory Services</h4>
+                    <p>Our advanced laboratory provides comprehensive diagnostic testing services with accurate and timely results. We utilize modern equipment and follow strict quality control protocols.</p>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="feature-box h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-stethoscope"></i>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-x-ray"></i>
                     </div>
-                    <h3>Diabetes Management Program</h3>
-                    <p>Our comprehensive Diabetes Management Program offers personalized care for patients with diabetes, including regular monitoring, diet counseling, lifestyle modifications, and the latest treatment options. Our multidisciplinary team works together to help patients effectively manage their condition.</p>
+                    <h4>Radiology Department</h4>
+                    <p>Our radiology department offers a full range of imaging services, including X-ray, Ultrasound, CT Scan, and MRI. Our experienced radiologists provide precise interpretations for accurate diagnoses.</p>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="feature-box h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-hand-holding-medical"></i>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital"></i>
                     </div>
-                    <h3>Rehabilitation Center</h3>
-                    <p>Our Rehabilitation Center provides comprehensive services for patients recovering from surgery, injury, or illness. Our team of physical therapists, occupational therapists, and rehabilitation specialists work together to create personalized recovery plans to help patients regain function and independence.</p>
+                    <h4>In-Patient Facilities</h4>
+                    <p>Our in-patient facilities include comfortable rooms with modern amenities to ensure a pleasant stay during treatment. We offer private, semi-private, and general ward options to meet different needs.</p>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="feature-box h-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-baby-carriage"></i>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-procedures"></i>
                     </div>
-                    <h3>Mother & Child Care Center</h3>
-                    <p>Our Mother & Child Care Center provides comprehensive care for expectant mothers and children, from prenatal care and delivery to pediatric healthcare. Our team of obstetricians, gynecologists, pediatricians, and specialized nurses work together to ensure the health and well-being of mothers and their children.</p>
+                    <h4>Operation Theaters</h4>
+                    <p>Our state-of-the-art operation theaters are equipped with advanced surgical equipment and follow strict sterilization protocols. We have dedicated teams of surgeons, anesthesiologists, and OT staff.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h4>Emergency Services</h4>
+                    <p>Our emergency department provides round-the-clock care for medical emergencies. Our emergency team is trained to handle critical situations with prompt and efficient response.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h4>Pharmacy</h4>
+                    <p>Our in-house pharmacy provides a wide range of medications and medical supplies. Our qualified pharmacists ensure the availability of prescribed medications and provide medication counseling.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- Facilities Section End -->
 
-<!-- Diagnostic Services Section -->
-<section class="section">
+<!-- Health Packages Section Start -->
+<section class="py-80">
     <div class="container">
-        <div class="section-title text-center">
-            <h2>Diagnostic & Laboratory Services</h2>
-            <p>Advanced diagnostic capabilities for accurate and timely results</p>
+        <div class="section-title">
+            <h2>Health Check-up Packages</h2>
+            <p>Preventive care for a healthier life</p>
         </div>
         <div class="row">
-            <div class="col-lg-6 mb-5">
-                <h3 class="mb-4">Imaging Services</h3>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>X-Ray:</strong> Digital X-ray services for bone, chest, and abdominal imaging</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>CT Scan:</strong> Advanced CT scanning for detailed cross-sectional images</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>MRI:</strong> High-resolution magnetic resonance imaging for soft tissues</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Ultrasound:</strong> Comprehensive ultrasound services for various organs</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Mammography:</strong> Digital mammography for breast cancer screening</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Bone Densitometry:</strong> DEXA scanning for bone density measurement</li>
-                </ul>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <h4 class="text-center mb-3">Basic Health Check-up</h4>
+                    <div class="text-center mb-3">
+                        <span class="display-6">₹2,999</span>
+                    </div>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Complete Blood Count</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Blood Sugar (Fasting & PP)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Lipid Profile</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Kidney Function Test</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Liver Function Test</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Chest X-ray</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>ECG</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Physician Consultation</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <h4 class="text-center mb-3">Comprehensive Health Check-up</h4>
+                    <div class="text-center mb-3">
+                        <span class="display-6">₹5,999</span>
+                    </div>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>All tests in Basic Package</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>HbA1c</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Thyroid Profile</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Vitamin D, B12</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Ultrasound Abdomen</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Pulmonary Function Test</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Stress Test</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Specialist Consultations</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('appointment') }}" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <h4 class="text-center mb-3">Executive Health Check-up</h4>
+                    <div class="text-center mb-3">
+                        <span class="display-6">₹9,999</span>
+                    </div>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>All tests in Comprehensive Package</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Tumor Markers</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>CT Scan</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>2D Echo</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Bone Density Scan</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Mammography (for women)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Prostate Screening (for men)</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i>Comprehensive Health Report</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Health Packages Section End -->
+
+<!-- Department FAQ Section Start -->
+<section class="py-80 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Common questions about our departments and services</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="accordion" id="faqAccordion1">
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What are your hospital's visiting hours?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body">
+                                Our general visiting hours are from 10:00 AM to 1:00 PM and 4:00 PM to 8:00 PM daily. However, visiting hours may vary for different departments and critical care units. We recommend checking with the specific ward or department for their visiting policies.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How do I schedule an appointment with a specialist?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body">
+                                You can schedule an appointment by calling our appointment desk at +91 123 456 7890, using our online appointment booking system on our website, or visiting our outpatient department in person. Please have your relevant medical records and referrals ready when making an appointment.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What insurance plans do you accept?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body">
+                                We accept most major insurance plans and are empanelled with various corporate and government health schemes. Please contact our insurance desk at +91 987 654 3210 or visit our website for a complete list of accepted insurance providers and cashless facilities.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6">
-                <h3 class="mb-4">Laboratory Services</h3>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Hematology:</strong> Complete blood count and other blood tests</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Biochemistry:</strong> Comprehensive biochemical analysis</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Microbiology:</strong> Culture and sensitivity tests for infections</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Immunology:</strong> Tests for immune system disorders</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Pathology:</strong> Histopathology and cytology services</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Molecular Diagnostics:</strong> Advanced genetic testing</li>
-                </ul>
+                <div class="accordion" id="faqAccordion2">
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Do I need to bring anything for my first appointment?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion2">
+                            <div class="accordion-body">
+                                For your first appointment, please bring your identification, insurance card (if applicable), referral letter (if any), previous medical records, list of current medications, and any recent test reports or imaging studies. This will help our doctors provide you with better care.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                How can I get my medical reports?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion2">
+                            <div class="accordion-body">
+                                You can collect your medical reports from our medical records department during working hours (9:00 AM to 5:00 PM). You will need to show your patient ID card or any valid identification. We also offer a digital report delivery service where reports can be accessed through our patient portal or sent via email upon request.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                What are the facilities available for admitted patients?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion2">
+                            <div class="accordion-body">
+                                Our in-patient facilities include private, semi-private, and general ward rooms with amenities such as air conditioning, television, attendant accommodation, Wi-Fi, and 24/7 nursing care. We also have a cafeteria, pharmacy, and prayer room within the hospital premises for patients and their families.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- CTA Section -->
-<section class="section bg-primary text-white">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="text-white">Need a medical consultation?</h2>
-                <p class="text-white mb-0">Our specialists are ready to provide expert care for your health concerns.</p>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-                <a href="{{ url_for('appointment') }}" class="btn btn-light btn-lg me-2 mb-2 mb-md-0">Book Appointment</a>
-                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Department FAQ Section End -->
 {% endblock %}
