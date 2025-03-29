@@ -1,23 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
   <style>
-    .logo-text { 
-      font-family: Poppins, sans-serif; 
-      font-weight: bold;
-    }
-    .tagline {
-      font-family: Roboto, sans-serif;
-      font-weight: 300;
-    }
+    .text { font: bold 22px sans-serif; fill: #0077B6; }
+    .tagline { font: 12px sans-serif; fill: #00B4D8; }
+    .icon-path { fill: #0077B6; }
+    .accent { fill: #38B000; }
   </style>
-  <g>
-    <!-- Medical Cross Symbol -->
-    <rect x="5" y="15" width="20" height="20" rx="2" fill="#0077cc"/>
-    <rect x="10" y="10" width="10" height="30" rx="2" fill="#0077cc"/>
-    <!-- Hospital Building Icon -->
-    <path d="M40,10 L40,40 L65,40 L65,10 L40,10 Z M45,15 L50,15 L50,20 L45,20 L45,15 Z M55,15 L60,15 L60,20 L55,20 L55,15 Z M45,25 L50,25 L50,30 L45,30 L45,25 Z M55,25 L60,25 L60,30 L55,30 L55,25 Z" fill="#39b54a"/>
-    <!-- Text Elements -->
-    <text x="75" y="25" class="logo-text" fill="#0077cc" font-size="18">ARVINDU</text>
-    <text x="75" y="38" class="logo-text" fill="#39b54a" font-size="14">HOSPITALS</text>
-    <text x="75" y="47" class="tagline" fill="#6c757d" font-size="7">CARE WITH COMPASSION</text>
+  
+  <!-- Medical Icon -->
+  <g transform="translate(10, 10)">
+    <path class="icon-path" d="M20,0 C8.954,0 0,8.954 0,20 C0,31.046 8.954,40 20,40 C31.046,40 40,31.046 40,20 C40,8.954 31.046,0 20,0 Z M20,36 C11.163,36 4,28.837 4,20 C4,11.163 11.163,4 20,4 C28.837,4 36,11.163 36,20 C36,28.837 28.837,36 20,36 Z" />
+    <rect class="accent" x="18" y="10" width="4" height="20" rx="2" />
+    <rect class="accent" x="10" y="18" width="20" height="4" rx="2" />
   </g>
+  
+  <!-- Hospital Name -->
+  <text class="text" x="60" y="30">Arvindu</text>
+  <text class="text" x="60" y="50">Hospitals</text>
+  
+  <!-- Tagline -->
+  <text class="tagline" x="170" y="50">Care for life</text>
 </svg>

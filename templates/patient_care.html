@@ -3,294 +3,524 @@
 {% block title %}Patient Care - Arvindu Hospitals{% endblock %}
 
 {% block content %}
-<!-- Page Header Start -->
-<div class="page-header">
+<!-- Page Header -->
+<section class="hero-section">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12 text-center">
                 <h1>Patient Care</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Patient Care</li>
-                    </ol>
-                </nav>
+                <p>Information and resources for patients to navigate their healthcare journey</p>
             </div>
         </div>
     </div>
-</div>
-<!-- Page Header End -->
+</section>
 
-<!-- Patient Care Overview Start -->
-<section class="py-80">
+<!-- Patient Information Section -->
+<section class="section-padding">
     <div class="container">
-        <div class="section-title">
-            <h2>Patient-Centered Care</h2>
-            <p>We are committed to providing compassionate and personalized care</p>
-        </div>
         <div class="row align-items-center">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <div style="height: 450px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
-                    <i class="fas fa-user-nurse fa-5x" style="color: #ccc;"></i>
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="about-img">
+                    <img src="https://source.unsplash.com/600x400/?hospital,patient" class="img-fluid rounded" alt="Patient Care">
                 </div>
             </div>
             <div class="col-lg-6">
-                <h3>Our Approach to Patient Care</h3>
-                <p>At Arvindu Hospitals, we believe that every patient deserves personalized attention and care. Our patient-centered approach focuses on treating not just the illness but the whole person, taking into account individual needs, preferences, and values.</p>
-                <p>We strive to create a healing environment where patients feel respected, informed, and involved in their care decisions. Our teams of healthcare professionals work collaboratively to ensure that each patient receives comprehensive care of the highest quality.</p>
-                <p>From admission to discharge and follow-up, we aim to make your healthcare journey as comfortable and stress-free as possible. Our dedicated staff is available around the clock to address your concerns and provide support when you need it most.</p>
-                <div class="mt-4">
-                    <a href="{{ url_for('appointment') }}" class="btn btn-primary me-3">Book an Appointment</a>
-                    <a href="{{ url_for('contact') }}" class="btn btn-outline-primary">Contact Us</a>
+                <div class="about-content">
+                    <div class="section-title text-start">
+                        <h2>Patient-Centered Care</h2>
+                    </div>
+                    <p>At Arvindu Hospitals, we believe in providing patient-centered care that prioritizes your health, comfort, and well-being. Our medical professionals are committed to delivering personalized care with compassion and respect for your unique needs.</p>
+                    <p>Whether you're visiting us for a routine check-up, specialized treatment, or emergency care, our dedicated team is here to support you throughout your healthcare journey.</p>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-primary">Book an Appointment</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Patient Care Overview End -->
 
-<!-- Patient Services Start -->
-<section class="py-80 bg-light">
+<!-- Admission Process -->
+<section class="section-padding bg-light">
     <div class="container">
         <div class="section-title">
-            <h2>Patient Services</h2>
-            <p>Comprehensive services designed to meet your healthcare needs</p>
+            <h2>Admission Process</h2>
+            <p>A step-by-step guide to the admission process at Arvindu Hospitals</p>
         </div>
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bed"></i>
+            <div class="col-lg-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="process-box text-center">
+                                    <div class="process-icon mb-3">
+                                        <i class="fas fa-user-md fa-3x text-primary"></i>
+                                    </div>
+                                    <h3>Step 1: Doctor's Recommendation</h3>
+                                    <p>Consult with our specialist who will evaluate your condition and recommend admission if necessary.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="process-box text-center">
+                                    <div class="process-icon mb-3">
+                                        <i class="fas fa-file-medical fa-3x text-primary"></i>
+                                    </div>
+                                    <h3>Step 2: Pre-Admission Formalities</h3>
+                                    <p>Complete registration forms and submit necessary documents at the admission desk.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="process-box text-center">
+                                    <div class="process-icon mb-3">
+                                        <i class="fas fa-procedures fa-3x text-primary"></i>
+                                    </div>
+                                    <h3>Step 3: Room Allocation</h3>
+                                    <p>Choose your preferred accommodation based on availability and get escorted to your room.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h4>Required Documents</h4>
+                            <ul>
+                                <li>Doctor's admission recommendation</li>
+                                <li>Valid photo ID proof (Aadhar Card, Voter ID, Passport, etc.)</li>
+                                <li>Insurance details (if applicable)</li>
+                                <li>Previous medical records and reports (if any)</li>
+                            </ul>
+                            
+                            <h4 class="mt-4">Payment Information</h4>
+                            <p>We accept the following payment methods:</p>
+                            <ul>
+                                <li>Cash</li>
+                                <li>Credit/Debit Cards</li>
+                                <li>Online Bank Transfers</li>
+                                <li>UPI Payments</li>
+                            </ul>
+                            <p>For patients with insurance coverage, we offer cashless facility with several insurance providers. Please check with our admission desk for more information.</p>
+                        </div>
                     </div>
-                    <h4>Inpatient Services</h4>
-                    <p>Our inpatient services provide 24/7 nursing care, comfortable accommodations, and comprehensive medical attention for patients requiring overnight stays. We offer private, semi-private, and general ward options with amenities designed for comfort and recovery.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-stethoscope"></i>
-                    </div>
-                    <h4>Outpatient Services</h4>
-                    <p>Our outpatient services offer convenient access to medical care without hospitalization. We provide consultations, diagnostic tests, minor procedures, and follow-up care on a same-day basis, allowing patients to return home after treatment.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-ambulance"></i>
-                    </div>
-                    <h4>Emergency Care</h4>
-                    <p>Our emergency department is staffed with experienced physicians and nurses ready to provide immediate care for critical conditions. We utilize advanced technology and follow established protocols to deliver prompt and effective emergency treatment.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-x-ray"></i>
-                    </div>
-                    <h4>Diagnostic Services</h4>
-                    <p>Our comprehensive diagnostic services include laboratory testing, medical imaging (X-ray, Ultrasound, CT, MRI), cardiac diagnostics, and other specialized tests. Our state-of-the-art equipment ensures accurate results for proper diagnosis and treatment planning.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-procedures"></i>
-                    </div>
-                    <h4>Surgical Services</h4>
-                    <p>Our surgical services encompass pre-operative evaluation, intra-operative care, and post-operative recovery. Our surgeons are skilled in various procedures, from minimally invasive techniques to complex surgeries, always prioritizing patient safety and outcomes.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hand-holding-medical"></i>
-                    </div>
-                    <h4>Preventive Care</h4>
-                    <p>Our preventive care services focus on maintaining good health and preventing illness. We offer health screenings, immunizations, health education, and lifestyle counseling to help patients stay healthy and detect potential issues early.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Patient Services End -->
 
-<!-- Patient Amenities Start -->
-<section class="py-80">
+<!-- Patient Facilities -->
+<section class="section-padding">
     <div class="container">
         <div class="section-title">
-            <h2>Patient Amenities</h2>
-            <p>Comfort and convenience during your stay with us</p>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="service-icon me-3" style="font-size: 2rem;">
-                            <i class="fas fa-hotel"></i>
-                        </div>
-                        <h4 class="mb-0">Accommodation Options</h4>
-                    </div>
-                    <p>We offer various room options to meet different needs and budgets:</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Deluxe Rooms: Private rooms with attached bathrooms, TV, WiFi, and attendant accommodation</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Semi-Private Rooms: Shared rooms with two beds, offering a balance of privacy and affordability</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>General Wards: Economical option with multiple beds in a shared space</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>ICU/CCU: Specialized care units with advanced monitoring equipment</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="service-icon me-3" style="font-size: 2rem;">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <h4 class="mb-0">Nutrition Services</h4>
-                    </div>
-                    <p>Our dietary services cater to both nutritional needs and personal preferences:</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Customized meal plans based on medical conditions and dietary restrictions</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Consultation with nutritionists to ensure balanced and appropriate nutrition</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Special diets for patients with specific health conditions</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Cafeteria services for visitors and outpatients</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="service-icon me-3" style="font-size: 2rem;">
-                            <i class="fas fa-concierge-bell"></i>
-                        </div>
-                        <h4 class="mb-0">Support Services</h4>
-                    </div>
-                    <p>We provide various support services to enhance patient comfort:</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Patient attendant services for additional assistance</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Interpreter services for patients with language barriers</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Patient transport within the hospital</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Discharge planning and coordination</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="service-icon me-3" style="font-size: 2rem;">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h4 class="mb-0">Facility Amenities</h4>
-                    </div>
-                    <p>Our hospital provides various conveniences for patients and visitors:</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>On-site pharmacy for medication needs</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>ATM services for financial convenience</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Prayer room for spiritual needs</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i>Waiting lounges for visitors with comfortable seating</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Patient Amenities End -->
-
-<!-- Patient Education Start -->
-<section class="py-80 bg-light">
-    <div class="container">
-        <div class="section-title">
-            <h2>Patient Education</h2>
-            <p>Empowering patients with knowledge for better health outcomes</p>
+            <h2>Patient Facilities</h2>
+            <p>Comprehensive facilities designed for patient comfort and care</p>
         </div>
         <div class="row">
             <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h4>Understanding Your Medical Condition</h4>
-                    <p>Knowledge about your medical condition helps you make informed decisions about your care. Our healthcare providers take time to explain diagnoses, treatment options, and expected outcomes in clear, understandable terms. We encourage patients to ask questions and participate actively in their care planning.</p>
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-bed fa-2x text-primary me-3"></i>
+                            <h3 class="mb-0">Accommodation</h3>
+                        </div>
+                        <p>We offer various types of accommodation to suit different patient needs and preferences:</p>
+                        <ul>
+                            <li><strong>General Ward:</strong> Affordable multiple-bed rooms with essential facilities</li>
+                            <li><strong>Semi-Private Rooms:</strong> Two-bed rooms with attached bathroom</li>
+                            <li><strong>Private Rooms:</strong> Single-bed rooms with enhanced privacy and comfort</li>
+                            <li><strong>Deluxe Rooms:</strong> Spacious rooms with premium amenities and attendant accommodation</li>
+                            <li><strong>ICU/CCU:</strong> State-of-the-art intensive care units with 24/7 monitoring</li>
+                        </ul>
+                        <p>All accommodations include nurse call systems, television, Wi-Fi, and hygienic washrooms.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h4>Medication Management</h4>
-                    <p>Understanding your medications is crucial for effective treatment. Our healthcare team provides detailed information about prescribed medications, including purpose, dosage, timing, potential side effects, and important precautions. Our pharmacists are available to address any questions or concerns about your medications.</p>
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-utensils fa-2x text-primary me-3"></i>
+                            <h3 class="mb-0">Food & Dietary Services</h3>
+                        </div>
+                        <p>Our in-house dietary department prepares nutritious and balanced meals for patients based on their health conditions and dietary requirements.</p>
+                        <ul>
+                            <li>Customized diet plans as prescribed by doctors</li>
+                            <li>Special diets for diabetic, cardiac, and other patients with specific needs</li>
+                            <li>Regular meal times with options for special requirements</li>
+                            <li>Clean and hygienic food preparation following strict quality standards</li>
+                        </ul>
+                        <p>Family members can order meals from our cafeteria at an additional cost.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h4>Preventive Care Guidelines</h4>
-                    <p>Prevention is better than cure. We provide guidance on preventive health measures, including recommended screenings based on age, gender, and risk factors. Our health education materials cover topics like nutrition, exercise, stress management, and lifestyle modifications to prevent disease and promote wellness.</p>
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-first-aid fa-2x text-primary me-3"></i>
+                            <h3 class="mb-0">Support Services</h3>
+                        </div>
+                        <ul>
+                            <li><strong>Pharmacy:</strong> 24/7 in-house pharmacy for medications</li>
+                            <li><strong>Diagnostic Services:</strong> Laboratory and imaging services available round the clock</li>
+                            <li><strong>Ambulance Services:</strong> Emergency medical transport available 24/7</li>
+                            <li><strong>Patient Information Desk:</strong> Assistance with general queries and guidance</li>
+                            <li><strong>Interpreter Services:</strong> Available for non-Hindi/English speaking patients</li>
+                            <li><strong>Social Services:</strong> Support for patients with financial concerns or special needs</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h4>Discharge Instructions</h4>
-                    <p>Clear discharge instructions are essential for continued recovery at home. Before leaving the hospital, patients receive comprehensive instructions about follow-up care, medication schedules, activity restrictions, dietary guidelines, potential complications to watch for, and when to seek medical attention. Our staff ensures you understand these instructions fully.</p>
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-hands-helping fa-2x text-primary me-3"></i>
+                            <h3 class="mb-0">Visitor Information</h3>
+                        </div>
+                        <p><strong>Visiting Hours:</strong></p>
+                        <ul>
+                            <li>General Wards: 10:00 AM - 12:00 PM and 4:00 PM - 7:00 PM</li>
+                            <li>Private Rooms: 10:00 AM - 8:00 PM</li>
+                            <li>ICU/CCU: As permitted by the doctor (usually brief visits during designated hours)</li>
+                        </ul>
+                        <p><strong>Guidelines for Visitors:</strong></p>
+                        <ul>
+                            <li>Please maintain silence and respect other patients' privacy</li>
+                            <li>Maximum two visitors per patient at a time</li>
+                            <li>Children below 12 years are not recommended in patient areas</li>
+                            <li>Avoid bringing food items without consulting the nursing staff</li>
+                            <li>Follow all infection control practices as instructed</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-12 text-center">
-                <a href="{{ url_for('blog') }}" class="btn btn-primary">Visit Our Health Blog</a>
             </div>
         </div>
     </div>
 </section>
-<!-- Patient Education End -->
 
-<!-- Patient Rights Section Start -->
-<section class="py-80">
+<!-- Insurance & Billing -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Insurance & Billing</h2>
+            <p>Information about insurance coverage and billing procedures</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">Insurance Coverage</h3>
+                        <p>Arvindu Hospitals has tie-ups with numerous insurance providers to offer cashless treatment facilities to our patients. We work with:</p>
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>Star Health Insurance</li>
+                                    <li>HDFC ERGO Health Insurance</li>
+                                    <li>Bajaj Allianz Health Insurance</li>
+                                    <li>ICICI Lombard Health Insurance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>New India Assurance</li>
+                                    <li>National Insurance Company</li>
+                                    <li>United India Insurance</li>
+                                    <li>Oriental Insurance Company</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>Aditya Birla Health Insurance</li>
+                                    <li>Max Bupa Health Insurance</li>
+                                    <li>Religare Health Insurance</li>
+                                    <li>Apollo Munich Health Insurance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3 class="mb-4">Government Schemes</h3>
+                        <p>We also accept patients under the following government health schemes:</p>
+                        <ul>
+                            <li>Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)</li>
+                            <li>Central Government Health Scheme (CGHS)</li>
+                            <li>Ex-Servicemen Contributory Health Scheme (ECHS)</li>
+                            <li>Employee State Insurance Scheme (ESIS)</li>
+                        </ul>
+                        
+                        <h3 class="mb-4 mt-5">Billing Process</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>For Cash Patients:</h5>
+                                <ol>
+                                    <li>An initial deposit is required at the time of admission</li>
+                                    <li>Interim bills are generated every 3-4 days for extended stays</li>
+                                    <li>Final settlement is done at the time of discharge</li>
+                                    <li>Detailed itemized bills are provided for all services rendered</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>For Insurance Patients:</h5>
+                                <ol>
+                                    <li>Insurance card and pre-authorization are required at admission</li>
+                                    <li>Our insurance desk will coordinate with your insurance provider</li>
+                                    <li>You'll need to pay for expenses not covered under your policy</li>
+                                    <li>All necessary documentation for claims will be provided</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-4">
+                            <strong>For any billing queries, please contact:</strong><br>
+                            Billing Department: +91 1234 567890<br>
+                            Email: billing@arvinduhospitals.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Patient Rights -->
+<section class="section-padding">
     <div class="container">
         <div class="section-title">
             <h2>Patient Rights & Responsibilities</h2>
             <p>Understanding your rights and responsibilities as a patient</p>
         </div>
         <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="service-card">
-                    <h4>Your Rights as a Patient</h4>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Respectful Care:</strong> You have the right to considerate, respectful care regardless of your race, religion, gender, ethnicity, or source of payment.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Information:</strong> You have the right to clear information about your diagnosis, treatment options, and prognosis in terms you can understand.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Informed Consent:</strong> You have the right to be involved in decisions about your care and to provide informed consent before any procedure.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Privacy:</strong> You have the right to privacy regarding your medical care and medical records.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Confidentiality:</strong> You have the right to expect that all communications and records pertaining to your care will be treated as confidential.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Right to Refuse Treatment:</strong> You have the right to refuse treatment to the extent permitted by law and to be informed of the medical consequences of such refusal.</li>
-                    </ul>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Your Rights as a Patient</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Right to Respectful Care:</strong> To receive considerate and respectful care regardless of age, gender, religion, or financial status.</li>
+                            <li><strong>Right to Information:</strong> To receive complete and accurate information about your diagnosis, treatment, and prognosis in understandable terms.</li>
+                            <li><strong>Right to Informed Consent:</strong> To be informed about the risks, benefits, and alternatives to any procedure or treatment before giving consent.</li>
+                            <li><strong>Right to Privacy:</strong> To expect confidentiality of all communications and records related to your care.</li>
+                            <li><strong>Right to Refuse Treatment:</strong> To refuse treatment to the extent permitted by law and to be informed of the medical consequences of such refusal.</li>
+                            <li><strong>Right to Advance Directives:</strong> To formulate advance directives and have healthcare providers comply with these directives.</li>
+                            <li><strong>Right to Access Medical Records:</strong> To access your medical records and request amendments if necessary.</li>
+                            <li><strong>Right to File Complaints:</strong> To voice grievances regarding your care without fear of discrimination or reprisal.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
-                <div class="service-card">
-                    <h4>Your Responsibilities as a Patient</h4>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Provide Information:</strong> You are responsible for providing accurate and complete information about your health, including past illnesses, hospitalizations, medications, and other matters related to your health.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Follow Treatment Plan:</strong> You are responsible for following the treatment plan recommended by your healthcare provider, including taking medications as prescribed.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Express Concerns:</strong> You are responsible for asking questions when you do not understand information or instructions and for expressing any concerns about your ability to follow the proposed treatment plan.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Hospital Rules:</strong> You are responsible for following hospital rules and regulations concerning patient care and conduct.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Respect Others:</strong> You are responsible for being considerate of the rights of other patients and hospital personnel and for being respectful of the property of other persons and the hospital.</li>
-                        <li><i class="fas fa-check-circle text-primary me-2"></i><strong>Financial Obligations:</strong> You are responsible for fulfilling the financial obligations associated with your care promptly.</li>
-                    </ul>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Your Responsibilities as a Patient</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Provide Information:</strong> To provide accurate and complete information about your health, medications, and medical history.</li>
+                            <li><strong>Follow Instructions:</strong> To follow the treatment plan recommended by your healthcare provider and report any unexpected changes in your condition.</li>
+                            <li><strong>Ask Questions:</strong> To ask questions when you do not understand information or instructions.</li>
+                            <li><strong>Hospital Rules:</strong> To follow hospital rules and regulations concerning patient conduct.</li>
+                            <li><strong>Respect and Consideration:</strong> To be considerate of the rights of other patients and hospital personnel, and to respect the property of others and the hospital.</li>
+                            <li><strong>Financial Obligations:</strong> To fulfill financial obligations associated with your care promptly.</li>
+                            <li><strong>Appointment Commitments:</strong> To keep appointments and notify the hospital or clinic when unable to do so.</li>
+                            <li><strong>Advance Directives:</strong> To inform your doctor and family about your advance directives regarding treatment decisions.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Patient Rights Section End -->
 
-<!-- Patient Feedback Start -->
-<section class="py-5 bg-primary text-white">
+<!-- Health Education -->
+<section class="section-padding bg-light">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="mb-2">Your Feedback Matters</h2>
-                <p class="mb-0">We value your input to continuously improve our services and patient care.</p>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Share Your Feedback</a>
+        <div class="section-title">
+            <h2>Health Education</h2>
+            <p>Resources to help you manage your health and make informed decisions</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <p>At Arvindu Hospitals, we believe that educated patients are empowered patients. We offer various resources to help you understand your health condition and make informed decisions about your care:</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="text-center">
+                                    <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                                    <h4>Patient Education Classes</h4>
+                                    <p>We conduct regular classes on various health topics such as diabetes management, cardiac health, pregnancy care, and more. Ask at the information desk for the schedule.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="text-center">
+                                    <i class="fas fa-book-medical fa-3x text-primary mb-3"></i>
+                                    <h4>Health Information Library</h4>
+                                    <p>Our patient resource center contains brochures, books, and videos on various health conditions. Visit our library on the ground floor near the main lobby.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="text-center">
+                                    <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+                                    <h4>One-on-One Counseling</h4>
+                                    <p>Our healthcare professionals provide personalized counseling to help you understand your condition, treatment options, and self-care strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h4>Upcoming Health Camps & Workshops</h4>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Topic</th>
+                                            <th>Location</th>
+                                            <th>Registration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>July 15, 2023</td>
+                                            <td>Diabetes Management Workshop</td>
+                                            <td>Patna Branch, Conference Room A</td>
+                                            <td>Free, Registration Required</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July 22, 2023</td>
+                                            <td>Cardiac Health Awareness Camp</td>
+                                            <td>Chapra Branch</td>
+                                            <td>Free Check-up Available</td>
+                                        </tr>
+                                        <tr>
+                                            <td>August 5, 2023</td>
+                                            <td>Women's Health Seminar</td>
+                                            <td>Patna Branch, Auditorium</td>
+                                            <td>Free, Open to All</td>
+                                        </tr>
+                                        <tr>
+                                            <td>August 12, 2023</td>
+                                            <td>Child Nutrition Workshop</td>
+                                            <td>Jamui Branch</td>
+                                            <td>Free, Registration Required</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mt-3">For registration and more information about health education programs, please call +91 1234 567890 or email education@arvinduhospitals.com</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Patient Feedback End -->
+
+<!-- International Patients -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>International Patient Services</h2>
+            <p>Specialized care and support for patients from abroad</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <img src="https://source.unsplash.com/600x400/?international,patient" class="img-fluid rounded" alt="International Patients">
+                            </div>
+                            <div class="col-md-6">
+                                <p>Arvindu Hospitals is committed to providing high-quality medical care to international patients. Our International Patient Services department ensures a seamless healthcare experience for patients from abroad.</p>
+                                <h4 class="mt-4">Services for International Patients:</h4>
+                                <ul>
+                                    <li>Assistance with visa documentation and medical visa process</li>
+                                    <li>Airport pickup and transportation arrangements</li>
+                                    <li>Language interpretation services</li>
+                                    <li>Cost estimates and package options for various treatments</li>
+                                    <li>Accommodation arrangements for patients and attendants</li>
+                                    <li>Dietary arrangements according to cultural preferences</li>
+                                    <li>Telemedicine consultations before and after treatment</li>
+                                    <li>Coordination with insurance providers and embassies</li>
+                                </ul>
+                                <p>For more information, please contact our International Patient Services desk at:<br>
+                                Email: international@arvinduhospitals.com<br>
+                                Phone: +91 1234 567890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Quick Links & Resources</h2>
+            <p>Essential resources and forms for patients</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="mb-3"><i class="fas fa-file-download text-primary me-2"></i> Patient Forms</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#"><i class="fas fa-file-pdf text-danger me-2"></i> Patient Registration Form</a></li>
+                            <li class="mb-2"><a href="#"><i class="fas fa-file-pdf text-danger me-2"></i> Admission Consent Form</a></li>
+                            <li class="mb-2"><a href="#"><i class="fas fa-file-pdf text-danger me-2"></i> Medical Records Request Form</a></li>
+                            <li class="mb-2"><a href="#"><i class="fas fa-file-pdf text-danger me-2"></i> Insurance Information Form</a></li>
+                            <li class="mb-2"><a href="#"><i class="fas fa-file-pdf text-danger me-2"></i> Feedback Form</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="mb-3"><i class="fas fa-phone-alt text-primary me-2"></i> Important Contacts</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong>Emergency:</strong> +91 1234 567890</li>
+                            <li class="mb-2"><strong>Appointment Desk:</strong> +91 1234 567891</li>
+                            <li class="mb-2"><strong>Patient Relations:</strong> +91 1234 567892</li>
+                            <li class="mb-2"><strong>Billing Department:</strong> +91 1234 567893</li>
+                            <li class="mb-2"><strong>Insurance Desk:</strong> +91 1234 567894</li>
+                            <li class="mb-2"><strong>Medical Records:</strong> +91 1234 567895</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="mb-3"><i class="fas fa-link text-primary me-2"></i> Useful Links</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="{{ url_for('doctors') }}">Find a Doctor</a></li>
+                            <li class="mb-2"><a href="{{ url_for('departments') }}">Our Specialties</a></li>
+                            <li class="mb-2"><a href="{{ url_for('appointment') }}">Book an Appointment</a></li>
+                            <li class="mb-2"><a href="{{ url_for('testimonials') }}">Patient Testimonials</a></li>
+                            <li class="mb-2"><a href="{{ url_for('blog') }}">Health Blog</a></li>
+                            <li class="mb-2"><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="appointment-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="text-white mb-4">Have Questions About Your Care?</h2>
+                <p class="text-white mb-5">Our patient relations team is available to assist you with any questions or concerns regarding your care at Arvindu Hospitals.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
