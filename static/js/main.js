@@ -1,4 +1,28 @@
+// Custom Cursor
 document.addEventListener('DOMContentLoaded', function() {
+    // Create and append custom cursor
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
+
+    // Update cursor position on mouse movement
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    // Add hover effect for interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, .btn, .nav-link, .card, .service-box, .blog-card, .doctor-card');
+    
+    interactiveElements.forEach(function(element) {
+        element.addEventListener('mouseenter', function() {
+            cursor.classList.add('hover');
+        });
+        
+        element.addEventListener('mouseleave', function() {
+            cursor.classList.remove('hover');
+        });
+    });
     // Initialize Slick Slider for testimonials
     if (document.querySelector('.testimonial-slider')) {
         $('.testimonial-slider').slick({

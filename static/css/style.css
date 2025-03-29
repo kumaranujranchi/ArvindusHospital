@@ -1,18 +1,48 @@
 /* Main Stylesheet for Arvindu Hospitals */
 
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+  
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  border-color: var(--secondary-color);
+}
+
+/* Make sure the cursor-tracker doesn't show on touch devices */
+@media (max-width: 991px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
 :root {
-  --primary-color: #0077B6;
-  --secondary-color: #00B4D8;
-  --accent-color: #48CAE4;
+  --primary-color: #00A7E1; /* Updated to match logo blue */
+  --secondary-color: #FF0066; /* Updated to match logo pink */
+  --accent-color: #00C9FF; /* Lighter blue for accents */
   --success-color: #38B000;
   --warning-color: #FFB703;
-  --danger-color: #D90429;
+  --danger-color: #FF0066; /* Using pink for danger/important items */
   --light-color: #F8F9FA;
   --dark-color: #212529;
   --gray-color: #6C757D;
   --white-color: #FFFFFF;
-  --hover-blue: #005f92;
-  --light-blue: #E1F5FE;
+  --hover-blue: #0089b8; /* Darker blue for hover states */
+  --hover-pink: #d60057; /* Darker pink for hover states */
+  --light-blue: #E7F6FD; /* Lighter blue background */
+  --light-pink: #FFF0F5; /* Light pink background */
   --font-family: 'Poppins', sans-serif;
 }
 
@@ -177,7 +207,7 @@ p {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 119, 182, 0.8), rgba(0, 119, 182, 0.8)), url('https://source.unsplash.com/1600x900/?hospital,healthcare');
+  background: linear-gradient(rgba(0, 167, 225, 0.8), rgba(255, 0, 102, 0.6)), url('https://source.unsplash.com/1600x900/?hospital,healthcare');
   background-size: cover;
   background-position: center;
   color: white;
@@ -477,7 +507,7 @@ p {
 
 /* Appointment Section */
 .appointment-section {
-  background: linear-gradient(rgba(0, 119, 182, 0.9), rgba(0, 119, 182, 0.9)), url('https://source.unsplash.com/1600x900/?doctor,medical');
+  background: linear-gradient(rgba(0, 167, 225, 0.9), rgba(255, 0, 102, 0.7)), url('https://source.unsplash.com/1600x900/?doctor,medical');
   background-size: cover;
   background-position: center;
   color: white;

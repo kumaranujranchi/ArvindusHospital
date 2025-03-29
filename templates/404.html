@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Page Not Found - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Error Page Section -->
+<section class="section-padding error-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="error-icon mb-4">
+                    <i class="fas fa-exclamation-triangle fa-5x text-warning"></i>
+                </div>
+                <h1>404</h1>
+                <h2>Page Not Found</h2>
+                <p class="lead mb-4">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

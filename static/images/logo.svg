@@ -1,22 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
   <style>
-    .text { font: bold 22px sans-serif; fill: #0077B6; }
-    .tagline { font: 12px sans-serif; fill: #00B4D8; }
-    .icon-path { fill: #0077B6; }
-    .accent { fill: #38B000; }
+    .arvindu-text { font-family: 'Arial', sans-serif; font-weight: bold; fill: #00A7E1; font-size: 32px; }
+    .hospitals-text { font-family: 'Arial', sans-serif; font-weight: bold; fill: #FF0066; font-size: 32px; }
   </style>
   
-  <!-- Medical Icon -->
-  <g transform="translate(10, 10)">
-    <path class="icon-path" d="M20,0 C8.954,0 0,8.954 0,20 C0,31.046 8.954,40 20,40 C31.046,40 40,31.046 40,20 C40,8.954 31.046,0 20,0 Z M20,36 C11.163,36 4,28.837 4,20 C4,11.163 11.163,4 20,4 C28.837,4 36,11.163 36,20 C36,28.837 28.837,36 20,36 Z" />
-    <rect class="accent" x="18" y="10" width="4" height="20" rx="2" />
-    <rect class="accent" x="10" y="18" width="20" height="4" rx="2" />
+  <!-- Heart Icon -->
+  <g transform="translate(30, 30) scale(0.8)">
+    <!-- Blue hand -->
+    <path d="M40,50 C15,30 0,15 0,0 C10,5 30,10 40,25 Z" fill="#00A7E1" />
+    
+    <!-- Pink heart -->
+    <path d="M40,25 C50,10 70,5 80,0 C80,15 65,30 40,50 Z" fill="#FF0066" />
   </g>
   
   <!-- Hospital Name -->
-  <text class="text" x="60" y="30">Arvindu</text>
-  <text class="text" x="60" y="50">Hospitals</text>
-  
-  <!-- Tagline -->
-  <text class="tagline" x="170" y="50">Care for life</text>
+  <text x="120" y="50" class="arvindu-text">Arvindu</text>
+  <text x="120" y="85" class="hospitals-text">Hospitals</text>
 </svg>

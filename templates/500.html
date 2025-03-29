@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Server Error - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Error Page Section -->
+<section class="section-padding error-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="error-icon mb-4">
+                    <i class="fas fa-cogs fa-5x text-danger"></i>
+                </div>
+                <h1>500</h1>
+                <h2>Server Error</h2>
+                <p class="lead mb-4">We're experiencing some technical difficulties at the moment. Please try again later.</p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
