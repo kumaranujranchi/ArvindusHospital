@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+  <style>
+    .logo-text { 
+      font-family: Poppins, sans-serif; 
+      font-weight: bold;
+    }
+    .tagline {
+      font-family: Roboto, sans-serif;
+      font-weight: 300;
+    }
+  </style>
+  <g>
+    <!-- Medical Cross Symbol -->
+    <rect x="5" y="15" width="20" height="20" rx="2" fill="#0077cc"/>
+    <rect x="10" y="10" width="10" height="30" rx="2" fill="#0077cc"/>
+    <!-- Hospital Building Icon -->
+    <path d="M40,10 L40,40 L65,40 L65,10 L40,10 Z M45,15 L50,15 L50,20 L45,20 L45,15 Z M55,15 L60,15 L60,20 L55,20 L55,15 Z M45,25 L50,25 L50,30 L45,30 L45,25 Z M55,25 L60,25 L60,30 L55,30 L55,25 Z" fill="#39b54a"/>
+    <!-- Text Elements -->
+    <text x="75" y="25" class="logo-text" fill="#0077cc" font-size="18">ARVINDU</text>
+    <text x="75" y="38" class="logo-text" fill="#39b54a" font-size="14">HOSPITALS</text>
+    <text x="75" y="47" class="tagline" fill="#6c757d" font-size="7">CARE WITH COMPASSION</text>
+  </g>
+</svg>

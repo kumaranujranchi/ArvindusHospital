@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arvindu Hospitals - Care with Compassion{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.svg') }}" type="image/svg+xml">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Arvindu Hospitals Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == url_for('departments') %}active{% endif %}" href="{{ url_for('departments') }}">Departments & Specialties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == url_for('doctors') %}active{% endif %}" href="{{ url_for('doctors') }}">Find a Doctor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == url_for('patient_care') %}active{% endif %}" href="{{ url_for('patient_care') }}">Patient Care</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item {% if request.path == url_for('testimonials') %}active{% endif %}" href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                                <li><a class="dropdown-item {% if request.path == url_for('blog') %}active{% endif %}" href="{{ url_for('blog') }}">Health Blog</a></li>
+                                <li><a class="dropdown-item {% if request.path == url_for('careers') %}active{% endif %}" href="{{ url_for('careers') }}">Career Opportunities</a></li>
+                                <li><a class="dropdown-item {% if request.path == url_for('news') %}active{% endif %}" href="{{ url_for('news') }}">Media & News</a></li>
+                                <li><a class="dropdown-item {% if request.path == url_for('csr') %}active{% endif %}" href="{{ url_for('csr') }}">CSR Initiatives</a></li>
+                                <li><a class="dropdown-item {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-appointment-btn" href="{{ url_for('appointment') }}">Book Appointment</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="container mt-3">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category if category != 'message' else 'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Error Message if provided -->
+    {% if error_message %}
+        <div class="container py-5 text-center">
+            <div class="py-5">
+                <h1 class="display-1 text-primary">Oops!</h1>
+                <h2 class="mb-4">{{ error_message }}</h2>
+                <p class="lead mb-4">Something went wrong. Please try again later or return to the home page.</p>
+                <a href="{{ url_for('home') }}" class="btn btn-primary">Go to Home</a>
+            </div>
+        </div>
+    {% else %}
+        <!-- Main Content -->
+        {% block content %}{% endblock %}
+    {% endif %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Arvindu Hospitals Logo" class="mb-4" style="height: 50px;">
+                        <p>Arvindu Hospitals is a multi-specialty healthcare provider committed to providing exceptional medical care with compassion and expertise.</p>
+                        <div class="footer-social mt-4">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="{{ url_for('about') }}">About Us</a></li>
+                            <li><a href="{{ url_for('departments') }}">Departments & Specialties</a></li>
+                            <li><a href="{{ url_for('doctors') }}">Find a Doctor</a></li>
+                            <li><a href="{{ url_for('patient_care') }}">Patient Care</a></li>
+                            <li><a href="{{ url_for('blog') }}">Health Blog</a></li>
+                            <li><a href="{{ url_for('careers') }}">Career Opportunities</a></li>
+                            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h3>Contact Info</h3>
+                        <ul class="footer-contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <p><strong>Patna Branch:</strong> Medical Corridor, Patna, Bihar</p>
+                                    <p><strong>Chapra Branch:</strong> Hospital Road, Chapra, Bihar</p>
+                                    <p><strong>Jamui Branch:</strong> Health District, Jamui, Bihar</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <p>Emergency: +91 123 456 7890</p>
+                                    <p>Appointments: +91 987 654 3210</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <p>info@arvinduhospitals.com</p>
+                                    <p>appointments@arvinduhospitals.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Newsletter</h3>
+                        <div class="footer-newsletter">
+                            <p>Subscribe to our newsletter to receive health tips, updates, and news.</p>
+                            <form>
+                                <input type="email" placeholder="Your Email Address">
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span class="current-year">2023</span> Arvindu Hospitals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

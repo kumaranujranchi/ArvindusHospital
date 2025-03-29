@@ -1,0 +1,521 @@
+{% extends 'base.html' %}
+
+{% block title %}Arvindu Hospitals - Care with Compassion{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Your Health Is Our Priority</h1>
+                <p>Arvindu Hospitals provides exceptional healthcare services with the latest technology and compassionate care. Our team of experienced doctors and medical professionals are dedicated to your wellbeing.</p>
+                <div class="hero-btns">
+                    <a href="{{ url_for('appointment') }}" class="btn btn-light btn-lg">Book an Appointment</a>
+                    <a href="{{ url_for('doctors') }}" class="btn btn-outline-light btn-lg">Find a Doctor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-box text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Expert Doctors</h3>
+                    <p>Our hospital has a team of experienced and dedicated healthcare professionals committed to providing the best care.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>Emergency Care</h3>
+                    <p>24/7 emergency services with a quick response team to handle all types of medical emergencies.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Advanced Technology</h3>
+                    <p>We use the latest medical technologies and equipment to provide accurate diagnosis and treatment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="section-title text-start">
+                    <h2>About Arvindu Hospitals</h2>
+                </div>
+                <p>Established with a vision to provide accessible, high-quality healthcare, Arvindu Hospitals has grown to become one of the leading healthcare providers in the region with branches in Patna, Chapra, and Jamui.</p>
+                <p>Our mission is to deliver exceptional healthcare services with compassion, integrity, and excellence. We strive to create a healing environment that respects the diversity, dignity, and special needs of each individual.</p>
+                <div class="mt-4">
+                    <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-6 mb-4">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>500+</h3>
+                            <p>Successful Surgeries</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3>50+</h3>
+                            <p>Qualified Doctors</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <h3>3</h3>
+                            <p>Hospital Branches</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <h3>10K+</h3>
+                            <p>Happy Patients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Departments Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our Departments & Specialties</h2>
+            <p>We offer a comprehensive range of medical services to meet all your healthcare needs</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Cardiology</h3>
+                    <p>Diagnosis and treatment of heart diseases and conditions.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Neurology</h3>
+                    <p>Treatment of disorders of the nervous system.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Orthopedics</h3>
+                    <p>Treatment of bones, joints, ligaments, and muscles.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Pediatrics</h3>
+                    <p>Medical care for infants, children, and adolescents.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('departments') }}" class="btn btn-primary">View All Departments</a>
+        </div>
+    </div>
+</section>
+
+<!-- Doctors Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our Expert Doctors</h2>
+            <p>Meet our team of experienced and dedicated healthcare professionals</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Sharma</h4>
+                        <p class="speciality">Cardiology</p>
+                        <div class="doctor-details">
+                            <p><i class="fas fa-graduation-cap me-2"></i>MBBS, MD, DM</p>
+                            <p><i class="fas fa-star me-2"></i>15+ Years Experience</p>
+                        </div>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Patel</h4>
+                        <p class="speciality">Neurology</p>
+                        <div class="doctor-details">
+                            <p><i class="fas fa-graduation-cap me-2"></i>MBBS, MD, DM</p>
+                            <p><i class="fas fa-star me-2"></i>12+ Years Experience</p>
+                        </div>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Gupta</h4>
+                        <p class="speciality">Orthopedics</p>
+                        <div class="doctor-details">
+                            <p><i class="fas fa-graduation-cap me-2"></i>MBBS, MS</p>
+                            <p><i class="fas fa-star me-2"></i>10+ Years Experience</p>
+                        </div>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Singh</h4>
+                        <p class="speciality">Pediatrics</p>
+                        <div class="doctor-details">
+                            <p><i class="fas fa-graduation-cap me-2"></i>MBBS, MD</p>
+                            <p><i class="fas fa-star me-2"></i>8+ Years Experience</p>
+                        </div>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('doctors') }}" class="btn btn-primary">View All Doctors</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>What Our Patients Say</h2>
+            <p>Hear from our patients about their experience at Arvindu Hospitals</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>I was admitted for cardiac treatment and received exceptional care. The doctors were knowledgeable and compassionate, and the nursing staff was attentive to my needs. Thank you, Arvindu Hospitals!</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h5>Rajesh Kumar</h5>
+                        <p>Patna</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>The orthopedic team at Arvindu Hospitals provided excellent treatment for my knee replacement. The rehabilitation support was outstanding, and I am now able to walk without pain. Highly recommended!</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h5>Sunita Devi</h5>
+                        <p>Chapra</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>I brought my daughter for pediatric care, and I was impressed by how child-friendly the department is. The doctors were gentle and took the time to explain everything. The staff made the experience positive for my child.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h5>Priya Singh</h5>
+                        <p>Jamui</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>The neurological department at Arvindu Hospitals is exceptional. The team diagnosed my condition accurately and started treatment promptly. The care I received was beyond my expectations.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h5>Amit Verma</h5>
+                        <p>Patna</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('testimonials') }}" class="btn btn-primary">View All Testimonials</a>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Section -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="section-title text-start">
+                    <h2>Book an Appointment</h2>
+                </div>
+                <p>Make an appointment with our specialists for consultation, diagnosis, or treatment. Our team is ready to provide you with the best medical care.</p>
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-info-box">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-info-details">
+                                <h4>Call Us</h4>
+                                <p>+91 987 654 3210</p>
+                                <p>Monday to Saturday: 8am - 8pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-info-box">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-details">
+                                <h4>Email Us</h4>
+                                <p>appointments@arvinduhospitals.com</p>
+                                <p>We'll respond within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-form">
+                    <form action="{{ url_for('appointment') }}" method="get">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="Your Phone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <select class="form-select">
+                                        <option selected disabled>Select Department</option>
+                                        <option>Cardiology</option>
+                                        <option>Neurology</option>
+                                        <option>Orthopedics</option>
+                                        <option>Pediatrics</option>
+                                        <option>Ophthalmology</option>
+                                        <option>Dermatology</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <select class="form-select">
+                                        <option selected disabled>Select Time</option>
+                                        <option>Morning (9AM - 12PM)</option>
+                                        <option>Afternoon (12PM - 3PM)</option>
+                                        <option>Evening (3PM - 6PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Latest from Our Health Blog</h2>
+            <p>Stay updated with our latest health tips, medical news, and articles</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div><i class="far fa-calendar-alt"></i> June 15, 2023</div>
+                            <div><i class="far fa-user"></i> Dr. Sharma</div>
+                        </div>
+                        <h4>Understanding Heart Health: Prevention Tips</h4>
+                        <p>Learn about the essential preventive measures to keep your heart healthy and reduce the risk of cardiovascular diseases.</p>
+                        <a href="{{ url_for('blog') }}" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div><i class="far fa-calendar-alt"></i> June 10, 2023</div>
+                            <div><i class="far fa-user"></i> Dr. Patel</div>
+                        </div>
+                        <h4>Neurological Health: Signs to Watch</h4>
+                        <p>Discover the early warning signs of neurological issues and when you should consult a specialist for proper diagnosis.</p>
+                        <a href="{{ url_for('blog') }}" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div><i class="far fa-calendar-alt"></i> June 5, 2023</div>
+                            <div><i class="far fa-user"></i> Dr. Singh</div>
+                        </div>
+                        <h4>Childhood Vaccinations: A Complete Guide</h4>
+                        <p>An essential guide for parents about childhood vaccinations, schedules, and addressing common concerns about immunization.</p>
+                        <a href="{{ url_for('blog') }}" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('blog') }}" class="btn btn-primary">View All Posts</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
