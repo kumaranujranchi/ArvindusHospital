@@ -364,4 +364,67 @@
         </div>
     </div>
 </section>
+
+<!-- Appointment Card Section -->
+<section class="appointment-card-section">
+    <div class="container">
+        <h2>Make an Appointment</h2>
+        <p>Schedule a consultation with our specialists for personalized care and treatment.</p>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="contact-box">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p>+91 1234 567890</p>
+                </div>
+                
+                <div class="contact-box">
+                    <i class="far fa-clock"></i>
+                    <h3>Working Hours</h3>
+                    <p>Outpatient Consultations:</p>
+                    <p>Monday to Saturday: 9:00 AM - 7:00 PM</p>
+                    <p>Emergency Services: 24/7</p>
+                </div>
+                
+                <div class="contact-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>Patna | Chapra | Jamui</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-8">
+                <div class="book-card">
+                    <h3>Book Your Appointment</h3>
+                    <a href="{{ url_for('appointment') }}" class="schedule-btn">Schedule Appointment</a>
+                </div>
+                
+                <div class="events-section">
+                    <h3>Upcoming Events</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="event-item">
+                                        <h4><i class="fas fa-calendar-check me-2"></i> Free Health Camp</h4>
+                                        <p>June 25, 2025 | Patna Branch</p>
+                                        <p>General health check-ups and consultations</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="event-item">
+                                        <h4><i class="fas fa-calendar-check me-2"></i> Diabetes Awareness</h4>
+                                        <p>July 10, 2025 | Chapra Branch</p>
+                                        <p>Free diabetes screening and education</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -247,6 +247,10 @@ p {
 
 .appointment-btn {
   margin-left: 15px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
 }
 
 /* Hero Section */
@@ -267,6 +271,127 @@ p {
   color: white;
   padding: 140px 0 60px;
   text-align: center;
+}
+
+/* Appointment Card */
+.appointment-card-section {
+  background: linear-gradient(to bottom, #00A7E1, #FF0066);
+  padding: 80px 0;
+  color: white;
+}
+
+.appointment-card-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.appointment-card-section p {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.appointment-card {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-box {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-box i {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.contact-box h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+.book-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.schedule-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.schedule-btn:hover {
+  background-color: var(--hover-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 167, 225, 0.4);
+}
+
+/* Events section */
+.events-section {
+  margin-top: 50px;
+}
+
+.events-section h3 {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.event-item {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.event-item p {
+  margin-bottom: 5px;
+  color: #666;
 }
 
 .hero-section h1 {
