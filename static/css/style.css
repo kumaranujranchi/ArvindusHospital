@@ -189,7 +189,18 @@ p {
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.logo-img {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 .navbar-nav .nav-link {
