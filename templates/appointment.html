@@ -1,0 +1,243 @@
+{% extends 'layout.html' %}
+
+{% block title %}Book an Appointment - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Book an Appointment</h1>
+                <p>Schedule your consultation with our experienced doctors</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Form Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="appointment-form">
+                    <h3 class="mb-4 text-center">Appointment Form</h3>
+                    <form method="POST" action="{{ url_for('appointment') }}">
+                        {{ form.csrf_token }}
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.name.label(class="form-label") }}
+                                    {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Your Full Name") }}
+                                    {% if form.name.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.name.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.email.label(class="form-label") }}
+                                    {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else ""), placeholder="Your Email Address") }}
+                                    {% if form.email.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.phone.label(class="form-label") }}
+                                    {{ form.phone(class="form-control" + (" is-invalid" if form.phone.errors else ""), placeholder="Your Phone Number") }}
+                                    {% if form.phone.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.phone.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.department.label(class="form-label") }}
+                                    {{ form.department(class="form-select" + (" is-invalid" if form.department.errors else "")) }}
+                                    {% if form.department.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.department.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.doctor.label(class="form-label") }}
+                                    {{ form.doctor(class="form-select" + (" is-invalid" if form.doctor.errors else "")) }}
+                                    {% if form.doctor.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.doctor.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.date.label(class="form-label") }}
+                                    {{ form.date(class="form-control" + (" is-invalid" if form.date.errors else ""), type="date") }}
+                                    {% if form.date.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.date.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            {{ form.time.label(class="form-label") }}
+                            {{ form.time(class="form-select" + (" is-invalid" if form.time.errors else "")) }}
+                            {% if form.time.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.time.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            {{ form.message.label(class="form-label") }}
+                            {{ form.message(class="form-control" + (" is-invalid" if form.message.errors else ""), rows="4", placeholder="Additional information or special requirements") }}
+                            {% if form.message.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.message.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="text-center">
+                            {{ form.submit(class="btn btn-primary btn-lg") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Info -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Appointment Information</h2>
+            <p>Important information regarding your hospital visit</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-clock fa-3x text-primary"></i>
+                        </div>
+                        <h3>OPD Timings</h3>
+                        <p>Our Outpatient Department (OPD) operates during the following hours:</p>
+                        <ul class="list-unstyled">
+                            <li>Monday to Saturday: 9:00 AM - 6:00 PM</li>
+                            <li>Sunday: 10:00 AM - 2:00 PM (Emergency only)</li>
+                        </ul>
+                        <p class="mt-3">Please arrive 15 minutes before your scheduled appointment time for registration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-file-medical fa-3x text-primary"></i>
+                        </div>
+                        <h3>Documents Required</h3>
+                        <p>Please bring the following documents with you:</p>
+                        <ul class="list-unstyled">
+                            <li>Valid photo ID (Aadhar Card, PAN Card, etc.)</li>
+                            <li>Previous medical records (if any)</li>
+                            <li>Insurance card or policy details (if applicable)</li>
+                            <li>List of current medications</li>
+                            <li>Recent test reports or scans (if available)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-phone-alt fa-3x text-primary"></i>
+                        </div>
+                        <h3>Need Help?</h3>
+                        <p>For any assistance with booking or rescheduling your appointment, please contact:</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Appointment Desk:</strong> +91 1234 567891</li>
+                            <li><strong>Email:</strong> appointment@arvinduhospitals.com</li>
+                            <li><strong>WhatsApp:</strong> +91 9876 543210</li>
+                        </ul>
+                        <p class="mt-3">Our appointment coordinators are available during OPD hours to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Important Note</h4>
+                    <p>Once your appointment is scheduled, you will receive a confirmation email with your appointment details. If you need to cancel or reschedule, please provide at least 24 hours notice to accommodate other patients.</p>
+                    <hr>
+                    <p class="mb-0">For emergency situations, please visit our Emergency Department which is available 24/7, or call our Emergency Helpline at +91 1234 567890.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Initialize date picker with min date as tomorrow
+    document.addEventListener('DOMContentLoaded', function() {
+        var today = new Date();
+        var tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        
+        var dd = String(tomorrow.getDate()).padStart(2, '0');
+        var mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        var yyyy = tomorrow.getFullYear();
+        
+        var minDate = yyyy + '-' + mm + '-' + dd;
+        document.getElementById('date').setAttribute('min', minDate);
+    });
+</script>
+{% endblock %}

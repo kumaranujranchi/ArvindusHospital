@@ -1,0 +1,215 @@
+{% extends 'layout.html' %}
+
+{% block title %}Contact Us - Arvindu Hospitals{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team for any inquiries or assistance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="contact-info">
+                    <h3 class="mb-4">Contact Information</h3>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h4>Main Hospital Location</h4>
+                            <p>123 Hospital Road, Patna<br>Bihar - 800001, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info-content">
+                            <h4>Phone Numbers</h4>
+                            <p>
+                                Emergency: +91 1234 567890<br>
+                                Appointment: +91 1234 567891<br>
+                                General Enquiry: +91 1234 567892
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-content">
+                            <h4>Email Address</h4>
+                            <p>
+                                info@arvinduhospitals.com<br>
+                                appointment@arvinduhospitals.com
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-content">
+                            <h4>Working Hours</h4>
+                            <p>
+                                24/7 Emergency Services<br>
+                                OPD Hours: 9:00 AM - 6:00 PM<br>
+                                Visiting Hours: 10:00 AM - 12:00 PM & 4:00 PM - 7:00 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <h3 class="mb-4">Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#" class="btn btn-outline-info me-2"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="btn btn-outline-danger me-2"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" class="btn btn-outline-primary"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <h3 class="mb-4">Send Us a Message</h3>
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        {{ form.csrf_token }}
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.name.label(class="form-label") }}
+                                    {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Your Full Name") }}
+                                    {% if form.name.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.name.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    {{ form.email.label(class="form-label") }}
+                                    {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else ""), placeholder="Your Email Address") }}
+                                    {% if form.email.errors %}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            {{ form.subject.label(class="form-label") }}
+                            {{ form.subject(class="form-control" + (" is-invalid" if form.subject.errors else ""), placeholder="Subject of your message") }}
+                            {% if form.subject.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.subject.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            {{ form.message.label(class="form-label") }}
+                            {{ form.message(class="form-control" + (" is-invalid" if form.message.errors else ""), rows="6", placeholder="Your Message") }}
+                            {% if form.message.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.message.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="text-end">
+                            {{ form.submit(class="btn btn-primary btn-lg") }}
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="mt-5">
+                    <h3 class="mb-4">Our Branches</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Patna Branch</h5>
+                                    <p class="card-text">
+                                        123 Hospital Road, Patna<br>
+                                        Bihar - 800001, India<br>
+                                        Phone: +91 1234 567890<br>
+                                        Email: patna@arvinduhospitals.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chapra Branch</h5>
+                                    <p class="card-text">
+                                        456 Medical Complex, Chapra<br>
+                                        Bihar - 841301, India<br>
+                                        Phone: +91 1234 567893<br>
+                                        Email: chapra@arvinduhospitals.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jamui Branch</h5>
+                                    <p class="card-text">
+                                        789 Health Street, Jamui<br>
+                                        Bihar - 811307, India<br>
+                                        Phone: +91 1234 567894<br>
+                                        Email: jamui@arvinduhospitals.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="mb-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Location Map</h2>
+            <p>Find us on the map for easy navigation</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="map-container" style="height: 450px; background-color: #eee; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt fa-4x text-primary mb-3"></i>
+                        <h4>Map Placeholder</h4>
+                        <p>Interactive map will be integrated here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

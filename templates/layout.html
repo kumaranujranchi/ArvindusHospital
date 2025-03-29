@@ -33,7 +33,7 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url_for('index') }}">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Arvindu Hospitals Logo" height="80" class="logo-img">
+                    <img src="{{ url_for('static', filename='images/logo-trimmed.png') }}" alt="Arvindu Hospitals Logo" class="logo-img">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -80,7 +80,7 @@
     <!-- Flash Messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
-            <div class="container flash-messages" style="margin-top: 100px;">
+            <div class="container flash-messages" style="margin-top: 120px;">
                 {% for category, message in messages %}
                     <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
                         {{ message }}
