@@ -2012,10 +2012,18 @@ p {
 }
 
 .department-item .card-header {
-  background: linear-gradient(135deg, var(--secondary-color), #ff8c6a) !important;
-  color: white;
+  background-color: var(--primary-color) !important;
   padding: 1rem 1.5rem;
   border-radius: 8px 8px 0 0;
+}
+
+.department-item .card-header h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0;
+}
+
+.department-item .card-header i {
+  color: var(--secondary-color);
 }
 
 .department-item .card-body {

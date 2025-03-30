@@ -30,9 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const departmentHeaders = document.querySelectorAll('.department-item .card-header');
     departmentHeaders.forEach(header => {
         header.classList.remove('bg-primary');
-        // Make sure we apply the gradient from CSS
-        header.style.background = 'linear-gradient(135deg, var(--secondary-color), #ff8c6a)';
-        header.style.color = 'white';
+        header.style.backgroundColor = 'var(--primary-color)';
+        
+        // Make header text peach/coral color
+        const headerTitle = header.querySelector('h3');
+        if (headerTitle) {
+            headerTitle.style.color = 'var(--secondary-color)';
+        }
+        
+        // Make icons peach/coral color
+        const headerIcon = header.querySelector('i');
+        if (headerIcon) {
+            headerIcon.style.color = 'var(--secondary-color)';
+        }
     });
     
     // Fix doctor icons
