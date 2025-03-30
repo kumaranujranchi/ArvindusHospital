@@ -574,8 +574,8 @@ p {
   background-color: rgba(255, 255, 255, 0.1);
   text-align: center;
   padding: 25px 20px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -583,7 +583,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 170px;
+  height: 200px;
 }
 
 .contact-box:hover {
@@ -625,10 +625,11 @@ p {
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 200px;
 }
 
 .book-card:hover {
@@ -666,7 +667,7 @@ p {
 
 /* Events section */
 .events-section {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
