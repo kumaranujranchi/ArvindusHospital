@@ -28,6 +28,29 @@
   }
 }
 
+/* Custom button styles */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-dark-color);
+  color: var(--secondary-color);
+}
+
+.btn-outline-primary-custom {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.btn-outline-primary-custom:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
 :root {
   --primary-color: #014037; /* Dark green from screenshot */
   --secondary-color: #F7A88B; /* Coral/peach from screenshot */
