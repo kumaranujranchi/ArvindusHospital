@@ -21,7 +21,13 @@
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="about-img">
-                    <img src="{{ url_for('static', filename='images/patient-care-new.png') }}" class="img-fluid rounded" alt="Patient Care">
+                    <div class="patient-care-image-container" style="position: relative;">
+                        <!-- Main image -->
+                        <img src="{{ url_for('static', filename='images/doctor-patient-care.svg') }}" class="img-fluid rounded main-image" alt="Patient-Centered Care" style="width: 100%; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px;">
+                        
+                        <!-- Second image partially overlapping -->
+                        <img src="{{ url_for('static', filename='images/patient-care.svg') }}" class="img-fluid rounded secondary-image" alt="Doctor Patient Interaction" style="width: 40%; position: absolute; bottom: -40px; right: -20px; border: 5px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.15); border-radius: 12px; background-color: white;">
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
