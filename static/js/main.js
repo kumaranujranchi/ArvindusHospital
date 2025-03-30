@@ -30,12 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const departmentHeaders = document.querySelectorAll('.department-item .card-header');
     departmentHeaders.forEach(header => {
         header.classList.remove('bg-primary');
+        // Make sure we apply the gradient from CSS
+        header.style.background = 'linear-gradient(135deg, var(--secondary-color), #ff8c6a)';
+        header.style.color = 'white';
     });
     
     // Fix doctor icons
     const doctorIcons = document.querySelectorAll('.fas.fa-user-md');
     doctorIcons.forEach(icon => {
         icon.classList.remove('text-primary');
+        icon.style.color = 'var(--secondary-color)';
     });
     
     // Fix blog buttons

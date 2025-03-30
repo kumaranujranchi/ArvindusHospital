@@ -2012,7 +2012,7 @@ p {
 }
 
 .department-item .card-header {
-  background-color: var(--primary-color) !important;
+  background: linear-gradient(135deg, var(--secondary-color), #ff8c6a) !important;
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 8px 8px 0 0;
