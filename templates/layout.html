@@ -98,64 +98,93 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <div class="footer-widget footer-about">
-                        <h3>About Us</h3>
-                        <p>Arvindu Hospitals is a leading healthcare provider with state-of-the-art facilities and experienced doctors across multiple specialties.</p>
-                        <div class="footer-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <img src="{{ url_for('static', filename='images/logo-trimmed.png') }}" alt="Arvindu Hospitals Logo">
+                            </div>
+                            <p>Arvindu Hospitals is a leading healthcare provider with state-of-the-art facilities and experienced doctors across multiple specialties.</p>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <div class="footer-widget footer-links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><i class="fas fa-angle-right"></i> <a href="{{ url_for('about') }}">About Us</a></li>
-                            <li><i class="fas fa-angle-right"></i> <a href="{{ url_for('departments') }}">Our Departments</a></li>
-                            <li><i class="fas fa-angle-right"></i> <a href="{{ url_for('doctors') }}">Our Doctors</a></li>
-                            <li><i class="fas fa-angle-right"></i> <a href="{{ url_for('patient_care') }}">Patient Care</a></li>
-                            <li><i class="fas fa-angle-right"></i> <a href="{{ url_for('careers') }}">Careers</a></li>
-                            <li><i class="fas fa-angle-right"></i> <a href="{{ url_for('contact') }}">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <div class="footer-widget footer-contact">
-                        <h3>Contact Info</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> Main Branch: Patna, Bihar, India</p>
-                        <p><i class="fas fa-phone-alt"></i> +91 1234 567890</p>
-                        <p><i class="fas fa-envelope"></i> info@arvinduhospitals.com</p>
-                        <p><i class="fas fa-clock"></i> 24/7 Emergency Services</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <div class="footer-widget footer-newsletter">
-                        <h3>Newsletter</h3>
-                        <p>Subscribe to our newsletter for health tips and hospital updates.</p>
-                        <form method="POST" action="{{ url_for('newsletter_subscribe') }}" id="newsletterForm">
-                            {{ newsletter_form.csrf_token }}
-                            <div class="input-group mb-3">
-                                {{ newsletter_form.email(class="form-control", placeholder="Your Email") }}
-                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Quick Links</h3>
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                                    <li><a href="{{ url_for('departments') }}">Our Departments</a></li>
+                                    <li><a href="{{ url_for('doctors') }}">Our Doctors</a></li>
+                                    <li><a href="{{ url_for('patient_care') }}">Patient Care</a></li>
+                                    <li><a href="{{ url_for('careers') }}">Careers</a></li>
+                                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                                </ul>
                             </div>
-                        </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Contact Info</h3>
+                            <div class="footer-contact-info">
+                                <div class="footer-contact-item">
+                                    <div class="footer-contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="footer-contact-text">
+                                        <h4>Location</h4>
+                                        <p>Main Branch: Patna, Bihar, India</p>
+                                    </div>
+                                </div>
+                                <div class="footer-contact-item">
+                                    <div class="footer-contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="footer-contact-text">
+                                        <h4>Call Us</h4>
+                                        <p>+91 1234 567890</p>
+                                    </div>
+                                </div>
+                                <div class="footer-contact-item">
+                                    <div class="footer-contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="footer-contact-text">
+                                        <h4>Email</h4>
+                                        <p>info@arvinduhospitals.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Newsletter</h3>
+                            <div class="footer-newsletter">
+                                <p>Subscribe to our newsletter for health tips and hospital updates.</p>
+                                <form method="POST" action="{{ url_for('newsletter_subscribe') }}" id="newsletterForm">
+                                    {{ newsletter_form.csrf_token }}
+                                    <div class="newsletter-form">
+                                        {{ newsletter_form.email(class="newsletter-input", placeholder="Your Email") }}
+                                        <button class="newsletter-submit" type="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center mb-0">&copy; 2025 Arvindu Hospitals. All Rights Reserved. <br>Designed and maintained by <a href="https://synergybrandarchitect.in/" target="_blank">Synergy Brand Architect</a></p>
-                    </div>
-                </div>
+                <p>&copy; 2025 Arvindu Hospitals. All Rights Reserved. Designed and maintained by <a href="https://synergybrandarchitect.in/" target="_blank">Synergy Brand Architect</a></p>
             </div>
         </div>
     </footer>
