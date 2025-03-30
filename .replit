@@ -37,3 +37,6 @@ task = "packager.installForAll"
 task = "shell.exec"
 args = "gunicorn --bind 0.0.0.0:5000 --reuse-port --reload main:app"
 waitForPort = 5000
+
+[objectStorage]
+defaultBucketID = "replit-objstore-0bbfc51b-7b78-4e24-b7bd-9e3ae719ad13"

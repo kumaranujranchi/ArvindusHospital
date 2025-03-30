@@ -29,20 +29,22 @@
 }
 
 :root {
-  --primary-color: #00A7E1; /* Updated to match logo blue */
-  --secondary-color: #FF0066; /* Updated to match logo pink */
-  --accent-color: #00C9FF; /* Lighter blue for accents */
+  --primary-color: #014037; /* Dark green from screenshot */
+  --secondary-color: #F7A88B; /* Coral/peach from screenshot */
+  --accent-color: #F7A88B; /* Using coral as accent */
   --success-color: #38B000;
   --warning-color: #FFB703;
-  --danger-color: #FF0066; /* Using pink for danger/important items */
-  --light-color: #F8F9FA;
-  --dark-color: #212529;
+  --danger-color: #F7A88B; /* Using coral for danger/important items */
+  --light-color: #FBF5F2; /* Light cream from screenshot */
+  --dark-color: #014037; /* Dark green again for consistency */
   --gray-color: #6C757D;
   --white-color: #FFFFFF;
-  --hover-blue: #0089b8; /* Darker blue for hover states */
-  --hover-pink: #d60057; /* Darker pink for hover states */
-  --light-blue: #E7F6FD; /* Lighter blue background */
-  --light-pink: #FFF0F5; /* Light pink background */
+  --hover-green: #002C26; /* Darker green for hover states */
+  --hover-coral: #E5937A; /* Darker coral for hover states */
+  --light-green: #E9F5F0; /* Lighter green background */
+  --light-coral: #FEF1EB; /* Light coral background */
+  --cream-bg: #FEF7F4; /* Cream background from screenshot */
+  --light-bg: #FEF7F4; /* Same as cream-bg for consistency */
   --font-family: 'Poppins', sans-serif;
 }
 
@@ -58,6 +60,28 @@ body {
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
+  background-color: var(--cream-bg);
+}
+
+/* Text styling */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.highlight {
+  display: inline-block;
+  padding: 0 5px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -74,7 +98,7 @@ a {
 }
 
 a:hover {
-  color: var(--hover-blue);
+  color: var(--hover-green);
 }
 
 p {
@@ -117,10 +141,10 @@ p {
 }
 
 .btn-primary:hover {
-  background-color: var(--hover-blue);
-  border-color: var(--hover-blue);
+  background-color: var(--hover-green);
+  border-color: var(--hover-green);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 167, 225, 0.4);
+  box-shadow: 0 5px 15px rgba(1, 64, 55, 0.4);
 }
 
 .btn-success {
@@ -135,6 +159,20 @@ p {
   box-shadow: 0 5px 15px rgba(44, 144, 0, 0.4);
 }
 
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--hover-coral);
+  border-color: var(--hover-coral);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(247, 168, 139, 0.4);
+  color: white;
+}
+
 .btn-outline-primary {
   color: var(--primary-color);
   border-color: var(--primary-color);
@@ -144,7 +182,19 @@ p {
   background-color: var(--primary-color);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 167, 225, 0.3);
+  box-shadow: 0 5px 15px rgba(1, 64, 55, 0.3);
+}
+
+.btn-outline-secondary {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(247, 168, 139, 0.3);
 }
 
 .section-padding {
@@ -255,7 +305,7 @@ p {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 167, 225, 0.8), rgba(255, 0, 102, 0.6)), url('https://source.unsplash.com/1600x900/?hospital,healthcare');
+  background: linear-gradient(rgba(1, 64, 55, 0.9), rgba(1, 64, 55, 0.8)), url('https://source.unsplash.com/1600x900/?hospital,healthcare');
   background-size: cover;
   background-position: center;
   color: white;
@@ -265,7 +315,7 @@ p {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(rgba(0, 167, 225, 0.8), rgba(255, 0, 102, 0.6)), url('https://source.unsplash.com/1600x900/?hospital');
+  background: linear-gradient(rgba(1, 64, 55, 0.9), rgba(1, 64, 55, 0.8)), url('https://source.unsplash.com/1600x900/?hospital');
   background-size: cover;
   background-position: center;
   color: white;
@@ -275,7 +325,7 @@ p {
 
 /* Appointment Card */
 .appointment-card-section {
-  background: linear-gradient(to bottom, #00A7E1, #FF0066);
+  background: linear-gradient(to right, var(--primary-color), var(--hover-green));
   padding: 80px 0;
   color: white;
 }
@@ -351,9 +401,9 @@ p {
 }
 
 .schedule-btn:hover {
-  background-color: var(--hover-blue);
+  background-color: var(--hover-green);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 167, 225, 0.4);
+  box-shadow: 0 5px 15px rgba(1, 64, 55, 0.4);
 }
 
 /* Events section */
@@ -373,7 +423,7 @@ p {
 .event-item {
   padding: 15px;
   border-radius: 5px;
-  background-color: #f8f9fa;
+  background-color: var(--light-green);
   margin-bottom: 10px;
   transition: all 0.3s ease;
 }
@@ -439,7 +489,7 @@ p {
   content: '\f058';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  color: var(--success-color);
+  color: var(--secondary-color);
   position: absolute;
   left: -20px;
 }
@@ -542,7 +592,7 @@ p {
   height: 35px;
   line-height: 35px;
   text-align: center;
-  background: var(--light-blue);
+  background: var(--light-green);
   color: var(--primary-color);
   border-radius: 50%;
   margin: 0 5px;
@@ -556,7 +606,7 @@ p {
 
 /* Testimonials Section */
 .testimonials-section {
-  background: var(--light-blue);
+  background: var(--light-green);
   padding: 80px 0;
 }
 
@@ -686,7 +736,7 @@ p {
 
 /* Appointment Section */
 .appointment-section {
-  background: linear-gradient(rgba(0, 167, 225, 0.9), rgba(255, 0, 102, 0.7)), url('https://source.unsplash.com/1600x900/?doctor,medical');
+  background: linear-gradient(rgba(1, 64, 55, 0.9), rgba(1, 64, 55, 0.8)), url('https://source.unsplash.com/1600x900/?doctor,medical');
   background-size: cover;
   background-position: center;
   color: white;
@@ -755,7 +805,7 @@ p {
 .contact-info .info-item i {
   width: 40px;
   height: 40px;
-  background: var(--light-blue);
+  background: var(--light-green);
   color: var(--primary-color);
   font-size: 1.2rem;
   display: flex;
