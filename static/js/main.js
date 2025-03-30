@@ -23,6 +23,33 @@ document.addEventListener('DOMContentLoaded', function() {
             cursor.classList.remove('hover');
         });
     });
+    
+    // Replace blue colors with theme colors
+    
+    // Fix department card headers
+    const departmentHeaders = document.querySelectorAll('.department-item .card-header');
+    departmentHeaders.forEach(header => {
+        header.classList.remove('bg-primary');
+    });
+    
+    // Fix doctor icons
+    const doctorIcons = document.querySelectorAll('.fas.fa-user-md');
+    doctorIcons.forEach(icon => {
+        icon.classList.remove('text-primary');
+    });
+    
+    // Fix blog buttons
+    const blogButtons = document.querySelectorAll('.btn-outline-primary, .btn-primary');
+    blogButtons.forEach(button => {
+        if (button.classList.contains('btn-outline-primary')) {
+            button.classList.remove('btn-outline-primary');
+            button.classList.add('btn-outline-secondary');
+        }
+        else if (button.classList.contains('btn-primary') && !button.classList.contains('appointment-btn')) {
+            button.classList.remove('btn-primary');
+            button.classList.add('btn-secondary');
+        }
+    });
     // Initialize Slick Slider for testimonials
     if (document.querySelector('.testimonial-slider')) {
         $('.testimonial-slider').slick({
