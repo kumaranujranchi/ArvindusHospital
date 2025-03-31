@@ -582,8 +582,9 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 170px;
+  justify-content: flex-start;
+  height: auto;
+  position: relative;
 }
 
 .contact-box:hover {
@@ -592,13 +593,25 @@ p {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
+.contact-box .icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+
 .contact-box i {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--primary-color);
-  margin-bottom: 20px;
-  display: inline-block;
-  padding: 15px;
-  border-radius: 50%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -619,17 +632,17 @@ p {
 .book-card {
   background: white;
   border-radius: 10px;
-  padding: 30px 25px;
+  padding: 40px 25px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 170px;
+  height: auto;
 }
 
 .book-card:hover {
@@ -2125,6 +2138,45 @@ p {
   .appointment-info {
     margin-bottom: 40px;
   }
+  
+  /* Contact box improvements for tablet */
+  .contact-box {
+    margin-top: 40px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+  
+  .contact-box .icon-container {
+    top: -30px;
+  }
+  
+  .contact-box i {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .contact-box h3 {
+    margin-top: 10px;
+  }
+  
+  /* Book card tablet optimization */
+  .book-card {
+    padding: 35px 25px;
+  }
+  
+  /* Better events section for tablets */
+  .events-section {
+    margin-bottom: 30px;
+  }
+  
+  /* Appointment section improvements */
+  .appointment-card-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .appointment-card-section p {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2151,6 +2203,50 @@ p {
   .footer {
     padding: 60px 0 0;
   }
+  
+  /* Mobile improvements for appointment section */
+  .contact-box {
+    padding-top: 45px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-box h3 {
+    font-size: 1.3rem;
+    margin-top: 5px;
+  }
+  
+  .contact-box i {
+    font-size: 1.8rem;
+  }
+  
+  /* Improved events section for mobile */
+  .event-item {
+    padding: 15px;
+  }
+  
+  .event-item h4 {
+    font-size: 16px;
+  }
+  
+  .event-item p {
+    font-size: 13px;
+  }
+  
+  /* Forms on mobile */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  
+  /* Better spacing for sections */
+  .section-title {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -2172,6 +2268,47 @@ p {
   
   .section-padding {
     padding: 50px 0;
+  }
+  
+  /* Small mobile improvements */
+  .contact-box {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 40px 15px 20px;
+  }
+  
+  .contact-box .icon-container {
+    top: -25px;
+  }
+  
+  .contact-box i {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  /* Book card mobile improvements */
+  .book-card {
+    padding: 25px 15px;
+  }
+  
+  .book-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  /* Navbar mobile improvements */
+  .navbar-brand img {
+    max-height: 40px;
+  }
+  
+  .navbar-toggler {
+    padding: 5px 10px;
   }
   
   .doctor-card .doctor-img {
