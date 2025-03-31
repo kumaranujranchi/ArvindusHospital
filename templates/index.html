@@ -329,58 +329,96 @@
 
 
 
-<!-- Appointment Card Section -->
-<section class="appointment-card-section">
+<!-- Appointment Section - New Design -->
+<section class="appointment-section-new">
     <div class="container">
-        <h2>Make an Appointment</h2>
-        <p>Schedule a consultation with our specialists for personalized care and treatment.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="appointment-header">
+                    <h2>Schedule Your Visit</h2>
+                    <p>Experience world-class healthcare with a simple appointment booking process</p>
+                </div>
+            </div>
+        </div>
         
         <div class="row">
-            <div class="col-lg-4 mb-4">
-                <div class="contact-box">
-                    <div class="icon-container">
-                        <i class="fas fa-phone-alt"></i>
+            <div class="col-lg-5">
+                <div class="appointment-card">
+                    <div class="appointment-card-decoration">
+                        <span class="appointment-circle"></span>
+                        <span class="appointment-circle"></span>
+                        <span class="appointment-circle"></span>
                     </div>
-                    <h3>Call Us</h3>
-                    <p>+91 1234 567890</p>
-                </div>
-                
-                <div class="contact-box">
-                    <div class="icon-container">
-                        <i class="far fa-clock"></i>
+                    <div class="appointment-card-icon">
+                        <i class="fas fa-calendar-check"></i>
                     </div>
-                    <h3>Working Hours</h3>
-                    <p>Outpatient Consultations:</p>
-                    <p>Monday to Saturday: 9:00 AM - 7:00 PM</p>
-                    <p>Emergency Services: 24/7</p>
+                    <h3>Book Your Appointment</h3>
+                    <p>Our specialists are available for consultations. Book your appointment now for personalized care.</p>
+                    <a href="{{ url_for('appointment') }}" class="btn-appointment">
+                        Schedule Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                
-
             </div>
             
-            <div class="col-lg-8">
-                <div class="book-card">
-                    <h3>Book Your Appointment</h3>
-                    <a href="{{ url_for('appointment') }}" class="schedule-btn">Schedule Appointment</a>
-                </div>
-                
-                <div class="events-section">
-                    <h3>Upcoming Events</h3>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="event-item">
-                                        <h4><i class="fas fa-calendar-check me-2 text-secondary"></i> Free Health Camp</h4>
-                                        <p><strong>June 25, 2025</strong> | Patna Branch</p>
-                                        <p>General health check-ups and consultations</p>
-                                    </div>
+            <div class="col-lg-7">
+                <div class="appointment-info-wrapper">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <div class="info-card-icon">
+                                    <i class="fas fa-phone-alt"></i>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="event-item">
-                                        <h4><i class="fas fa-calendar-check me-2 text-secondary"></i> Diabetes Awareness</h4>
-                                        <p><strong>July 10, 2025</strong> | Chapra Branch</p>
-                                        <p>Free diabetes screening and education</p>
+                                <h4>Contact Us</h4>
+                                <div class="info-content">
+                                    <p><i class="fas fa-phone-alt"></i> +91 1234 567890</p>
+                                    <p><i class="fas fa-envelope"></i> appointments@arvindu.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <div class="info-card-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <h4>Working Hours</h4>
+                                <div class="info-content">
+                                    <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                                    <p>Emergency: Open 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="events-card">
+                                <div class="events-card-header">
+                                    <h4><i class="fas fa-calendar-week"></i> Upcoming Events</h4>
+                                </div>
+                                <div class="events-card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="event-item-new">
+                                                <div class="event-date">
+                                                    <span class="day">25</span>
+                                                    <span class="month">Jun</span>
+                                                </div>
+                                                <div class="event-details">
+                                                    <h5>Free Health Camp</h5>
+                                                    <p>Patna Branch</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="event-item-new">
+                                                <div class="event-date">
+                                                    <span class="day">10</span>
+                                                    <span class="month">Jul</span>
+                                                </div>
+                                                <div class="event-details">
+                                                    <h5>Diabetes Awareness</h5>
+                                                    <p>Chapra Branch</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
