@@ -2238,6 +2238,17 @@ p {
     margin-top: 10px;
   }
   
+  /* Fix for mobile menu text color */
+  .navbar-collapse .navbar-nav .nav-link {
+    color: var(--primary-color);
+  }
+  
+  /* Ensure mobile menu hover state is still visible */
+  .navbar-collapse .navbar-nav .nav-link:hover,
+  .navbar-collapse .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+  }
+  
   .appointment-btn {
     margin: 10px 0 0;
     display: block;
