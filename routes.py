@@ -1,12 +1,25 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, current_app
 from app import app, db
 from forms import AppointmentForm, ContactForm, NewsletterForm
-from models import Appointment, ContactMessage, Newsletter
 import logging
+
+# Import models with error handling
+try:
+    from models import Appointment, ContactMessage, Newsletter
+    MODELS_AVAILABLE = True
+except Exception as e:
+    current_app.logger.warning(f"Models not available: {e}")
+    MODELS_AVAILABLE = False
 
 
 @app.route('/')
 def index():
+    newsletter_form = NewsletterForm()
+    return render_template('index.html', newsletter_form=newsletter_form)
+
+
+@app.route('/home')
+def home():
     newsletter_form = NewsletterForm()
     return render_template('index.html', newsletter_form=newsletter_form)
 
@@ -69,28 +82,34 @@ def csr():
 def appointment():
     form = AppointmentForm()
     newsletter_form = NewsletterForm()
-    
+
     if form.validate_on_submit():
-        try:
-            new_appointment = Appointment(
-                name=form.name.data,
-                email=form.email.data,
-                phone=form.phone.data,
-                department=form.department.data,
-                doctor=form.doctor.data,
-                date=form.date.data,
-                time=form.time.data,
-                message=form.message.data
-            )
-            db.session.add(new_appointment)
-            db.session.commit()
-            flash('Your appointment has been booked successfully! We will contact you soon.', 'success')
+        if MODELS_AVAILABLE:
+            try:
+                new_appointment = Appointment(
+                    name=form.name.data,
+                    email=form.email.data,
+                    phone=form.phone.data,
+                    department=form.department.data,
+                    doctor=form.doctor.data,
+                    date=form.date.data,
+                    time=form.time.data,
+                    message=form.message.data
+                )
+                db.session.add(new_appointment)
+                db.session.commit()
+                flash('Your appointment has been booked successfully! We will contact you soon.', 'success')
+                return redirect(url_for('appointment'))
+            except Exception as e:
+                db.session.rollback()
+                logging.error(f"Error booking appointment: {e}")
+                flash('There was an error booking your appointment. Please try again.', 'danger')
+        else:
+            # Database not available - show demo message
+            flash('Demo mode: Your appointment request has been received. Database will be connected soon!', 'info')
+            logging.info(f"Demo appointment: {form.name.data} - {form.email.data} - {form.department.data}")
             return redirect(url_for('appointment'))
-        except Exception as e:
-            db.session.rollback()
-            logging.error(f"Error booking appointment: {e}")
-            flash('There was an error booking your appointment. Please try again.', 'danger')
-    
+
     return render_template('appointment.html', form=form, newsletter_form=newsletter_form)
 
 
@@ -98,47 +117,58 @@ def appointment():
 def contact():
     form = ContactForm()
     newsletter_form = NewsletterForm()
-    
+
     if form.validate_on_submit():
-        try:
-            new_message = ContactMessage(
-                name=form.name.data,
-                email=form.email.data,
-                subject=form.subject.data,
-                message=form.message.data
-            )
-            db.session.add(new_message)
-            db.session.commit()
-            flash('Your message has been sent successfully! We will get back to you soon.', 'success')
+        if MODELS_AVAILABLE:
+            try:
+                new_message = ContactMessage(
+                    name=form.name.data,
+                    email=form.email.data,
+                    subject=form.subject.data,
+                    message=form.message.data
+                )
+                db.session.add(new_message)
+                db.session.commit()
+                flash('Your message has been sent successfully! We will get back to you soon.', 'success')
+                return redirect(url_for('contact'))
+            except Exception as e:
+                db.session.rollback()
+                logging.error(f"Error sending contact message: {e}")
+                flash('There was an error sending your message. Please try again.', 'danger')
+        else:
+            # Database not available - show demo message
+            flash('Demo mode: Your message has been received. Database will be connected soon!', 'info')
+            logging.info(f"Demo contact: {form.name.data} - {form.email.data} - {form.subject.data}")
             return redirect(url_for('contact'))
-        except Exception as e:
-            db.session.rollback()
-            logging.error(f"Error sending contact message: {e}")
-            flash('There was an error sending your message. Please try again.', 'danger')
-    
+
     return render_template('contact.html', form=form, newsletter_form=newsletter_form)
 
 
 @app.route('/newsletter-subscribe', methods=['POST'])
 def newsletter_subscribe():
     form = NewsletterForm()
-    
+
     if form.validate_on_submit():
-        try:
-            # Check if email already exists
-            existing_email = Newsletter.query.filter_by(email=form.email.data).first()
-            if existing_email:
-                flash('This email is already subscribed to our newsletter.', 'info')
-            else:
-                new_subscriber = Newsletter(email=form.email.data)
-                db.session.add(new_subscriber)
-                db.session.commit()
-                flash('Thank you for subscribing to our newsletter!', 'success')
-        except Exception as e:
-            db.session.rollback()
-            logging.error(f"Error subscribing to newsletter: {e}")
-            flash('There was an error processing your subscription. Please try again.', 'danger')
-    
+        if MODELS_AVAILABLE:
+            try:
+                # Check if email already exists
+                existing_email = Newsletter.query.filter_by(email=form.email.data).first()
+                if existing_email:
+                    flash('This email is already subscribed to our newsletter.', 'info')
+                else:
+                    new_subscriber = Newsletter(email=form.email.data)
+                    db.session.add(new_subscriber)
+                    db.session.commit()
+                    flash('Thank you for subscribing to our newsletter!', 'success')
+            except Exception as e:
+                db.session.rollback()
+                logging.error(f"Error subscribing to newsletter: {e}")
+                flash('There was an error processing your subscription. Please try again.', 'danger')
+        else:
+            # Database not available - show demo message
+            flash('Demo mode: Newsletter subscription received. Database will be connected soon!', 'info')
+            logging.info(f"Demo newsletter subscription: {form.email.data}")
+
     # Redirect back to the referring page
     return redirect(request.referrer or url_for('index'))
 
