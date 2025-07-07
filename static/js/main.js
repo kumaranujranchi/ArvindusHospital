@@ -243,4 +243,177 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
+
+    // Form submission handlers for Netlify Functions
+
+    // Appointment Form Handler
+    const appointmentForm = document.getElementById('appointmentForm');
+    if (appointmentForm) {
+        appointmentForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
+
+            try {
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+
+                const response = await fetch('/.netlify/functions/appointment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage('success', result.message);
+                    this.reset();
+                } else {
+                    showMessage('error', result.error || 'Failed to book appointment');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('error', 'Network error. Please try again.');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        });
+    }
+
+    // Contact Form Handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            try {
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+
+                const response = await fetch('/.netlify/functions/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage('success', result.message);
+                    this.reset();
+                } else {
+                    showMessage('error', result.error || 'Failed to send message');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('error', 'Network error. Please try again.');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        });
+    }
+
+    // Newsletter Form Handler
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalHTML = submitBtn.innerHTML;
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+            try {
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+
+                const response = await fetch('/.netlify/functions/newsletter', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage('success', result.message, 'newsletter-message');
+                    this.reset();
+                } else {
+                    showMessage('error', result.error || 'Failed to subscribe', 'newsletter-message');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('error', 'Network error. Please try again.', 'newsletter-message');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalHTML;
+            }
+        });
+    }
+
+    // Helper function to show messages
+    function showMessage(type, message, targetId = null) {
+        const alertClass = type === 'success' ? 'alert-success' : 'alert-danger';
+        const iconClass = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+
+        const alertHTML = `
+            <div class="alert ${alertClass} alert-dismissible fade show mt-3" role="alert">
+                <i class="fas ${iconClass} me-2"></i>
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+
+        if (targetId) {
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.innerHTML = alertHTML;
+                target.style.display = 'block';
+            }
+        } else {
+            // Show at the top of the page
+            const container = document.querySelector('.container');
+            if (container) {
+                const alertDiv = document.createElement('div');
+                alertDiv.innerHTML = alertHTML;
+                container.insertBefore(alertDiv, container.firstChild);
+
+                // Auto-dismiss after 5 seconds
+                setTimeout(() => {
+                    const alert = alertDiv.querySelector('.alert');
+                    if (alert) {
+                        const bsAlert = new bootstrap.Alert(alert);
+                        bsAlert.close();
+                    }
+                }, 5000);
+            }
+        }
+    }
 });

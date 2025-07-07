@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Doctor - Arvindu Hospitals</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="static/images/logo.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="static/css/slick.css">
+    <link rel="stylesheet" href="static/css/slick-theme.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="static/images/logo-trimmed.png" alt="Arvindu Hospitals Logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="departments.html">Departments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="doctors.html">Find a Doctor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="patient_care.html">Patient Care</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="blog.html">Health Blog</a></li>
+                                <li><a class="dropdown-item" href="careers.html">Career Opportunities</a></li>
+                                <li><a class="dropdown-item" href="news.html">Media & News</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-appointment-btn" href="appointment.html">Book Appointment</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Find a Doctor</h1>
+                        <p>Meet our team of experienced and dedicated medical professionals</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="search-form">
+                            <h3 class="text-center mb-4">Search for a Doctor</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <select class="form-control">
+                                            <option value="">Select Department</option>
+                                            <option value="cardiology">Cardiology</option>
+                                            <option value="neurology">Neurology</option>
+                                            <option value="orthopedics">Orthopedics</option>
+                                            <option value="pediatrics">Pediatrics</option>
+                                            <option value="gynecology">Gynecology</option>
+                                            <option value="emergency">Emergency Care</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <select class="form-control">
+                                            <option value="">Select Location</option>
+                                            <option value="patna">Patna Branch</option>
+                                            <option value="chapra">Chapra Branch</option>
+                                            <option value="jamui">Jamui Branch</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Search Doctors</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Medical Team</h2>
+                    <p>Experienced doctors committed to providing the best healthcare services</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="doctor-card">
+                            <div class="doctor-img">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Rajesh Sharma</h3>
+                                <div class="specialty">Senior Cardiologist</div>
+                                <div class="experience">15+ Years Experience</div>
+                                <p>Specializing in interventional cardiology with expertise in complex heart procedures and cardiac care.</p>
+                                <div class="doctor-details">
+                                    <p><i class="fas fa-graduation-cap"></i> MBBS, MD (Cardiology)</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Patna Branch</p>
+                                </div>
+                                <div class="doctor-actions">
+                                    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="doctor-card">
+                            <div class="doctor-img">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Priya Singh</h3>
+                                <div class="specialty">Neurologist</div>
+                                <div class="experience">12+ Years Experience</div>
+                                <p>Expert in stroke management, epilepsy treatment, and neuro-interventional procedures.</p>
+                                <div class="doctor-details">
+                                    <p><i class="fas fa-graduation-cap"></i> MBBS, MD (Neurology)</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Patna Branch</p>
+                                </div>
+                                <div class="doctor-actions">
+                                    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="doctor-card">
+                            <div class="doctor-img">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Amit Gupta</h3>
+                                <div class="specialty">Orthopedic Surgeon</div>
+                                <div class="experience">18+ Years Experience</div>
+                                <p>Specialized in joint replacement surgeries and sports medicine with international training.</p>
+                                <div class="doctor-details">
+                                    <p><i class="fas fa-graduation-cap"></i> MBBS, MS (Orthopedics)</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Chapra Branch</p>
+                                </div>
+                                <div class="doctor-actions">
+                                    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="doctor-card">
+                            <div class="doctor-img">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Sunita Mishra</h3>
+                                <div class="specialty">Gynecologist</div>
+                                <div class="experience">14+ Years Experience</div>
+                                <p>Experienced in minimally invasive surgeries and high-risk pregnancy management.</p>
+                                <div class="doctor-details">
+                                    <p><i class="fas fa-graduation-cap"></i> MBBS, MD (Gynecology)</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Patna Branch</p>
+                                </div>
+                                <div class="doctor-actions">
+                                    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="doctor-card">
+                            <div class="doctor-img">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Ravi Kumar</h3>
+                                <div class="specialty">Pediatrician</div>
+                                <div class="experience">10+ Years Experience</div>
+                                <p>Specialized in child healthcare with expertise in pediatric emergency care and vaccinations.</p>
+                                <div class="doctor-details">
+                                    <p><i class="fas fa-graduation-cap"></i> MBBS, MD (Pediatrics)</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Jamui Branch</p>
+                                </div>
+                                <div class="doctor-actions">
+                                    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="doctor-card">
+                            <div class="doctor-img">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Anita Jha</h3>
+                                <div class="specialty">Emergency Medicine</div>
+                                <div class="experience">8+ Years Experience</div>
+                                <p>Expert in emergency care, trauma management, and critical care medicine.</p>
+                                <div class="doctor-details">
+                                    <p><i class="fas fa-graduation-cap"></i> MBBS, MD (Emergency Medicine)</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> All Branches</p>
+                                </div>
+                                <div class="doctor-actions">
+                                    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2>Schedule Your Consultation</h2>
+                        <p>Ready to meet with one of our experienced doctors? Book your appointment today and take the first step towards better health.</p>
+                        <div class="mt-4">
+                            <a href="appointment.html" class="btn btn-primary btn-lg">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <img src="static/images/logo-trimmed.png" alt="Arvindu Hospitals Logo" class="mb-4" style="height: 50px;">
+                        <p>Arvindu Hospitals is a multi-specialty healthcare provider committed to providing exceptional medical care with compassion and expertise.</p>
+                        <div class="footer-social mt-4">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="departments.html">Departments & Specialties</a></li>
+                            <li><a href="doctors.html">Find a Doctor</a></li>
+                            <li><a href="patient_care.html">Patient Care</a></li>
+                            <li><a href="blog.html">Health Blog</a></li>
+                            <li><a href="careers.html">Career Opportunities</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h3>Contact Info</h3>
+                        <ul class="footer-contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <p><strong>Patna Branch:</strong> Medical Corridor, Patna, Bihar</p>
+                                    <p><strong>Chapra Branch:</strong> Hospital Road, Chapra, Bihar</p>
+                                    <p><strong>Jamui Branch:</strong> Health District, Jamui, Bihar</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <p>Emergency: +91 123 456 7890</p>
+                                    <p>Appointments: +91 987 654 3210</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <p>info@arvinduhospitals.com</p>
+                                    <p>appointments@arvinduhospitals.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Newsletter</h3>
+                        <div class="footer-newsletter">
+                            <p>Subscribe to our newsletter to receive health tips, updates, and news.</p>
+                            <form id="newsletter-form">
+                                <div class="d-flex">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email Address" required>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="newsletter-message" class="mt-2 text-success small" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <span class="current-year">2024</span> Arvindu Hospitals. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p>Design and Maintenance by <a href="https://synergybrandarchitect.in/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Synergy Brand Architect</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/js/slick.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

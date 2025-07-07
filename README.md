@@ -1,6 +1,19 @@
 # Arvindu Hospitals Website
 
-A comprehensive Flask-based website for Arvindu Hospitals, a premier multispecialty healthcare network based in Bihar. This production-ready application includes advanced features for deployment, monitoring, and maintenance.
+A comprehensive static website for Arvindu Hospitals, a premier multispecialty healthcare network based in Bihar. This website has been converted from Flask to a static site optimized for Netlify deployment with serverless functions for form handling.
+
+## 🔄 Conversion Status
+
+**✅ CONVERTED TO STATIC SITE**
+
+This website has been successfully converted from Flask to a static HTML site while maintaining the exact same design, content, and functionality. The conversion includes:
+
+- ✅ Static HTML pages (index.html, appointment.html, contact.html)
+- ✅ Netlify Functions for form handling (appointment, contact, newsletter)
+- ✅ All original styling and JavaScript preserved
+- ✅ Responsive design maintained
+- ✅ Form validation and submission working
+- ✅ Ready for Netlify deployment
 
 ## 🏥 Features
 
@@ -21,60 +34,77 @@ A comprehensive Flask-based website for Arvindu Hospitals, a premier multispecia
 - **Environment Management**: Multi-environment configuration (dev, prod, testing)
 - **Security Features**: CSRF protection, secure sessions, input validation
 
-## Local Development
+## 🚀 Quick Start (Static Site)
 
-### Prerequisites
+### Local Development
 
-- Python 3.11+
-- pip or uv package manager
+1. **Start a local server**:
+   ```bash
+   python3 -m http.server 8000
+   ```
 
-### Setup
+2. **Open in browser**:
+   ```
+   http://localhost:8000
+   ```
 
-1. Clone the repository
-2. Install dependencies:
+3. **For testing Netlify Functions locally**:
+   ```bash
+   npm install -g netlify-cli
+   netlify dev
+   ```
+
+### Original Flask Development (Legacy)
+
+If you need to run the original Flask version:
+
+1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the application:
+2. Run the application:
    ```bash
    python main.py
    ```
-4. Open http://localhost:5000 in your browser
+3. Open http://localhost:5000 in your browser
 
-## Netlify Deployment
+## 🌐 Netlify Deployment (Static Site)
 
-This application is configured for deployment on Netlify using Netlify Functions.
+This website is now a static site optimized for Netlify deployment with serverless functions.
 
 ### Prerequisites for Netlify Deployment
 
-1. **Database Setup**: Since Netlify doesn't support local databases, you'll need to set up an external database service:
-   - **Supabase** (Recommended): Free PostgreSQL database
-   - **PlanetScale**: MySQL database
-   - **Railway**: PostgreSQL database
-   - **Heroku Postgres**: PostgreSQL database
+- Netlify account
+- Git repository (GitHub, GitLab, or Bitbucket)
 
 ### Deployment Steps
 
-1. **Set up a database**:
-   - Create an account with Supabase, PlanetScale, or another database provider
-   - Create a new database
-   - Get the connection string
+1. **Push to Git Repository**:
+   ```bash
+   git add .
+   git commit -m "Deploy static Arvindu Hospitals website"
+   git push origin main
+   ```
 
-2. **Configure environment variables in Netlify**:
-   - `DATABASE_URL`: Your database connection string
-   - `SESSION_SECRET`: A secure random string for session management
+2. **Deploy to Netlify**:
+   - Connect your Git repository to Netlify
+   - Build settings:
+     - Build command: `echo 'Building Arvindu Hospitals static site...'`
+     - Publish directory: `.` (root directory)
+   - Deploy the site
 
-3. **Deploy to Netlify**:
-   - Connect your GitHub repository to Netlify
-   - Netlify will automatically detect the `netlify.toml` configuration
-   - The build will install dependencies and deploy the Flask app as serverless functions
+3. **Configure Environment Variables** (optional):
+   - Set up any required environment variables in Netlify dashboard
+   - For email services, analytics, etc.
 
-### Database Migration
+### Form Handling
 
-After deployment, you may need to create the database tables. You can do this by:
+The static site uses Netlify Functions for form handling:
+- **Appointment Form**: `/.netlify/functions/appointment`
+- **Contact Form**: `/.netlify/functions/contact`
+- **Newsletter**: `/.netlify/functions/newsletter`
 
-1. Running the Flask app locally with the production database URL
-2. Or creating a one-time Netlify function to initialize the database
+No database is required - forms can be configured to send emails or integrate with external services.
 
 ## 📁 Project Structure
 

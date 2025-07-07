@@ -1,7 +1,124 @@
 [build]
-  command = "pip install --upgrade pip && pip install -r requirements.txt"
-  functions = "netlify/functions"
-  publish = "static"
+  # Directory to publish (the root directory since we have static HTML files)
+  publish = "."
+
+  # Build command (not needed for static site, but can be used for preprocessing)
+  command = "echo 'Building Arvindu Hospitals static site...'"
 
 [build.environment]
-  PYTHON_VERSION = "3.8"
+  # Node.js version for Netlify Functions
+  NODE_VERSION = "18"
+
+# Netlify Functions configuration
+[functions]
+  # Directory where Netlify Functions are located
+  directory = "netlify/functions"
+
+# Redirect rules for clean URLs and SPA-like behavior
+[[redirects]]
+  # Redirect /appointment to appointment.html
+  from = "/appointment"
+  to = "/appointment.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /about to about.html
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /contact to contact.html
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /departments to departments.html
+  from = "/departments"
+  to = "/departments.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /doctors to doctors.html
+  from = "/doctors"
+  to = "/doctors.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /patient-care to patient_care.html
+  from = "/patient-care"
+  to = "/patient_care.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /testimonials to testimonials.html
+  from = "/testimonials"
+  to = "/testimonials.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /blog to blog.html
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /careers to careers.html
+  from = "/careers"
+  to = "/careers.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /news to news.html
+  from = "/news"
+  to = "/news.html"
+  status = 200
+
+[[redirects]]
+  # Redirect /csr to csr.html
+  from = "/csr"
+  to = "/csr.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Cache control for static assets
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    # Cache control for HTML files (shorter cache time)
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    # CORS headers for Netlify Functions
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+
+# Form handling (Netlify's built-in form handling as backup)
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = false
+  minify = true
+
+[build.processing.js]
+  bundle = false
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
