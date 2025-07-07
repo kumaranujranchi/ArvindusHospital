@@ -1,0 +1,14 @@
+{
+  "name": "arvindu-hospitals",
+  "version": "1.0.0",
+  "description": "Arvindu Hospitals - Static Website with Netlify Functions",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["hospital", "healthcare", "static-site", "netlify"],
+  "author": "Arvindu Hospitals",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

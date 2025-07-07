@@ -2,12 +2,14 @@
   # Directory to publish (the root directory since we have static HTML files)
   publish = "."
 
-  # Build command (not needed for static site, but can be used for preprocessing)
-  command = "echo 'Building Arvindu Hospitals static site...'"
+  # No build command needed for static site
+  command = "echo 'Static site deployment - no build required'"
 
 [build.environment]
   # Node.js version for Netlify Functions
   NODE_VERSION = "18"
+  # Disable Python detection
+  PYTHON_VERSION = ""
 
 # Netlify Functions configuration
 [functions]
