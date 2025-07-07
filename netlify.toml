@@ -4,18 +4,7 @@
   publish = "static"
 
 [build.environment]
-  PYTHON_VERSION = "3.11"
-  PIP_CACHE_DIR = ".pip_cache"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/app"
-  status = 200
+  PYTHON_VERSION = "3.9"
 
 [functions]
-  python_runtime = "python3.11"
+  python_runtime = "python3.9"
