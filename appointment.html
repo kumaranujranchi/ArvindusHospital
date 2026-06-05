@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Arvindu Hospitals</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/static/images/logo.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Slick Slider CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Additional CSS -->
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/home">
+                    <img src="/static/images/logo-trimmed.png" alt="Arvindu Hospitals Logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/departments">Departments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/doctors">Find a Doctor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/patient-care">Patient Care</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item " href="/testimonials">Testimonials</a></li>
+                                <li><a class="dropdown-item " href="/blog">Health Blog</a></li>
+                                <li><a class="dropdown-item " href="/careers">Careers</a></li>
+                                <li><a class="dropdown-item " href="/news">Media & News</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="/appointment" class="btn btn-primary appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Flash Messages -->
+    
+        
+    
+
+    <!-- Main Content -->
+    <main>
+        
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Book an Appointment</h1>
+                <p>Schedule your consultation with our experienced doctors</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Form Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="appointment-form">
+                    <h3 class="mb-4 text-center">Appointment Form</h3>
+                    <form method="POST" action="/appointment">
+                        
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Full Name</label>
+                                    <input class="form-control" id="name" maxlength="100" minlength="2" name="name" placeholder="Your Full Name" required type="text" value="">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" id="email" name="email" placeholder="Your Email Address" required type="email" value="">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">Phone Number</label>
+                                    <input class="form-control" id="phone" maxlength="20" minlength="6" name="phone" placeholder="Your Phone Number" required type="text" value="">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label class="form-label" for="department">Department</label>
+                                    <select class="form-select" id="department" name="department" required><option value="">Select Department</option><option value="cardiology">Cardiology</option><option value="neurology">Neurology</option><option value="orthopedics">Orthopedics</option><option value="pediatrics">Pediatrics</option><option value="gynecology">Gynecology</option><option value="dermatology">Dermatology</option><option value="ophthalmology">Ophthalmology</option><option value="ent">ENT</option><option value="gastroenterology">Gastroenterology</option><option value="oncology">Oncology</option></select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label class="form-label" for="doctor">Doctor (Optional)</label>
+                                    <select class="form-select" id="doctor" name="doctor"><option value="">Select Doctor (Optional)</option><option value="dr_sharma">Dr. Sharma</option><option value="dr_patel">Dr. Patel</option><option value="dr_singh">Dr. Singh</option><option value="dr_gupta">Dr. Gupta</option><option value="dr_kumar">Dr. Kumar</option></select>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label class="form-label" for="date">Preferred Date</label>
+                                    <input class="form-control" id="date" name="date" required type="date" value="">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            <label class="form-label" for="time">Preferred Time</label>
+                            <select class="form-select" id="time" name="time" required><option value="">Select Time</option><option value="morning">Morning (9AM - 12PM)</option><option value="afternoon">Afternoon (12PM - 3PM)</option><option value="evening">Evening (3PM - 6PM)</option></select>
+                            
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            <label class="form-label" for="message">Message (Optional)</label>
+                            <textarea class="form-control" id="message" maxlength="500" name="message" placeholder="Additional information or special requirements" rows="4">
+</textarea>
+                            
+                        </div>
+                        
+                        <div class="text-center">
+                            <input class="btn btn-primary btn-lg" id="submit" name="submit" type="submit" value="Book Appointment">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Info -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Appointment Information</h2>
+            <p>Important information regarding your hospital visit</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-clock fa-3x text-primary"></i>
+                        </div>
+                        <h3>OPD Timings</h3>
+                        <p>Our Outpatient Department (OPD) operates during the following hours:</p>
+                        <ul class="list-unstyled">
+                            <li>Monday to Saturday: 9:00 AM - 6:00 PM</li>
+                            <li>Sunday: 10:00 AM - 2:00 PM (Emergency only)</li>
+                        </ul>
+                        <p class="mt-3">Please arrive 15 minutes before your scheduled appointment time for registration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-file-medical fa-3x text-primary"></i>
+                        </div>
+                        <h3>Documents Required</h3>
+                        <p>Please bring the following documents with you:</p>
+                        <ul class="list-unstyled">
+                            <li>Valid photo ID (Aadhar Card, PAN Card, etc.)</li>
+                            <li>Previous medical records (if any)</li>
+                            <li>Insurance card or policy details (if applicable)</li>
+                            <li>List of current medications</li>
+                            <li>Recent test reports or scans (if available)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-phone-alt fa-3x text-primary"></i>
+                        </div>
+                        <h3>Need Help?</h3>
+                        <p>For any assistance with booking or rescheduling your appointment, please contact:</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Appointment Desk:</strong> +91 1234 567891</li>
+                            <li><strong>Email:</strong> appointment@arvinduhospitals.com</li>
+                            <li><strong>WhatsApp:</strong> +91 9876 543210</li>
+                        </ul>
+                        <p class="mt-3">Our appointment coordinators are available during OPD hours to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Important Note</h4>
+                    <p>Once your appointment is scheduled, you will receive a confirmation email with your appointment details. If you need to cancel or reschedule, please provide at least 24 hours notice to accommodate other patients.</p>
+                    <hr>
+                    <p class="mb-0">For emergency situations, please visit our Emergency Department which is available 24/7, or call our Emergency Helpline at +91 1234 567890.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <img src="/static/images/logo-trimmed.png" alt="Arvindu Hospitals Logo">
+                            </div>
+                            <p>Arvindu Hospitals is a leading healthcare provider with state-of-the-art facilities and experienced doctors across multiple specialties.</p>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Quick Links</h3>
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/departments">Our Departments</a></li>
+                                    <li><a href="/doctors">Our Doctors</a></li>
+                                    <li><a href="/patient-care">Patient Care</a></li>
+                                    <li><a href="/careers">Careers</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Contact Info</h3>
+                            <div class="footer-contact-info">
+                                <div class="footer-contact-item">
+                                    <div class="footer-contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="footer-contact-text">
+                                        <h4>Location</h4>
+                                        <p>Main Branch: Patna, Bihar, India</p>
+                                    </div>
+                                </div>
+                                <div class="footer-contact-item">
+                                    <div class="footer-contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="footer-contact-text">
+                                        <h4>Call Us</h4>
+                                        <p>+91 1234 567890</p>
+                                    </div>
+                                </div>
+                                <div class="footer-contact-item">
+                                    <div class="footer-contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="footer-contact-text">
+                                        <h4>Email</h4>
+                                        <p>info@arvinduhospitals.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Newsletter</h3>
+                            <div class="footer-newsletter">
+                                <p>Subscribe to our newsletter for health tips and hospital updates.</p>
+                                <form method="POST" action="/newsletter-subscribe" id="newsletterForm">
+                                    
+                                    <div class="newsletter-form">
+                                        <input class="newsletter-input" id="email" name="email" placeholder="Your Email" required type="email" value="">
+                                        <button class="newsletter-submit" type="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Arvindu Hospitals. All Rights Reserved. Designed and maintained by <a href="https://synergybrandarchitect.in/" target="_blank">Synergy Brand Architect</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Slick Slider JS (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    <!-- Additional JS -->
+    
+<script>
+    // Initialize date picker with min date as tomorrow
+    document.addEventListener('DOMContentLoaded', function() {
+        var today = new Date();
+        var tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        
+        var dd = String(tomorrow.getDate()).padStart(2, '0');
+        var mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        var yyyy = tomorrow.getFullYear();
+        
+        var minDate = yyyy + '-' + mm + '-' + dd;
+        document.getElementById('date').setAttribute('min', minDate);
+    });
+</script>
+
+</body>
+</html>
